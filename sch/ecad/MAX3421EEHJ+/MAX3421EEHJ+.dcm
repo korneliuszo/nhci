@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP MAX3421EEHJ+
+D MAX3421EEHJ+, USB Controller 12 Mbit/s USB 2.0, 3.3 V, 32-Pin, TQFP
+K
+F http://docs-emea.rs-online.com/webdocs/0f71/0900766b80f71b08.pdf
+$ENDCMP
+#
+#End Doc Library

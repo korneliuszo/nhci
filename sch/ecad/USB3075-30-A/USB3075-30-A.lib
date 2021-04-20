@@ -1,0 +1,34 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model USB3075-30-A
+#/1811976/471841/2.49/11/4/Connector
+DEF USB3075-30-A J 0 30 Y Y 1 F N
+F0 "J" 850 300 50 H V L CNN
+F1 "USB3075-30-A" 850 200 50 H V L CNN
+F2 "USB307530A" 850 100 50 H I L CNN
+F3 "https://componentsearchengine.com/Datasheets/2/USB3075-30-A.pdf" 850 0 50 H I L CNN
+F4 "GCT (GLOBAL CONNECTOR TECHNOLOGY) - USB3075-30-A - USB Connector, Micro USB Type B, USB 2.0, Receptacle, 5 Ways, Surface Mount, Right Angle" 850 -100 50 H I L CNN "Description"
+F5 "2.7" 850 -200 50 H I L CNN "Height"
+F6 "GCT (GLOBAL CONNECTOR TECHNOLOGY)" 850 -300 50 H I L CNN "Manufacturer_Name"
+F7 "USB3075-30-A" 850 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "" 850 -500 50 H I L CNN "Mouser Part Number"
+F9 "" 850 -600 50 H I L CNN "Mouser Price/Stock"
+F10 "" 850 -700 50 H I L CNN "Arrow Part Number"
+F11 "" 850 -800 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X 1 1 0 0 200 R 50 50 0 0 P
+X 2 2 0 -100 200 R 50 50 0 0 P
+X 3 3 0 -200 200 R 50 50 0 0 P
+X 4 4 0 -300 200 R 50 50 0 0 P
+X 5 5 0 -400 200 R 50 50 0 0 P
+X MH1 MH1 0 -500 200 R 50 50 0 0 P
+X MH2 MH2 1000 0 200 L 50 50 0 0 P
+X MP1 MP1 1000 -100 200 L 50 50 0 0 P
+X MP2 MP2 1000 -200 200 L 50 50 0 0 P
+X MP3 MP3 1000 -300 200 L 50 50 0 0 P
+X MP4 MP4 1000 -400 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 800 100 800 -600 200 -600 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library

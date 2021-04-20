@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ECS-5032MV-120-BM-TR
+D Standard Clock Oscillators 12MHz 1.8-3.3V 50ppm -20C +70C
+K
+F https://www.arrow.com/en/products/ecs-5032mv-120-bm-tr/ecs-international
+$ENDCMP
+#
+#End Doc Library
