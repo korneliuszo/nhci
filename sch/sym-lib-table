@@ -1,0 +1,12 @@
+(sym_lib_table
+  (lib (name 74LVC8T245RHLRG4)(type Legacy)(uri ${KIPRJMOD}/ecad/74LVC8T245RHLRG4/74LVC8T245RHLRG4.lib)(options "")(descr ""))
+  (lib (name CLP-105-02-F-D)(type Legacy)(uri ${KIPRJMOD}/ecad/CLP-105-02-F-D/CLP-105-02-F-D.lib)(options "")(descr ""))
+  (lib (name ECS-5032MV-120-BM-TR)(type Legacy)(uri ${KIPRJMOD}/ecad/ECS-5032MV-120-BM-TR/ECS-5032MV-120-BM-TR.lib)(options "")(descr ""))
+  (lib (name FT2232HQ-TRAY)(type Legacy)(uri ${KIPRJMOD}/ecad/FT2232HQ-TRAY/FT2232HQ-TRAY.lib)(options "")(descr ""))
+  (lib (name MAX3421EEHJ+)(type Legacy)(uri ${KIPRJMOD}/ecad/MAX3421EEHJ+/MAX3421EEHJ+.lib)(options "")(descr ""))
+  (lib (name MTMS-105-02-T-D-002)(type Legacy)(uri ${KIPRJMOD}/ecad/MTMS-105-02-T-D-002/MTMS-105-02-T-D-002.lib)(options "")(descr ""))
+  (lib (name USB3075-30-A)(type Legacy)(uri ${KIPRJMOD}/ecad/USB3075-30-A/USB3075-30-A.lib)(options "")(descr ""))
+  (lib (name N25Q032A13EF440F)(type Legacy)(uri ${KIPRJMOD}/own/N25Q032A13EF440F.lib)(options "")(descr ""))
+  (lib (name PCMCIA_USB)(type Legacy)(uri ${KIPRJMOD}/own/PCMCIA_USB.lib)(options "")(descr ""))
+  (lib (name Lattice_iCE_FPGA)(type Legacy)(uri ${KIPRJMOD}/KiCad-Schematic-Symbol-Libraries/Lattice_iCE_FPGA.lib)(options "")(descr ""))
+)

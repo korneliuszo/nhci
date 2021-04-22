@@ -1,0 +1,10 @@
+(fp_lib_table
+  (lib (name 74LVC8T245RHLRG4)(type KiCad)(uri ${KIPRJMOD}/ecad/74LVC8T245RHLRG4)(options "")(descr ""))
+  (lib (name CLP-105-02-F-D)(type KiCad)(uri ${KIPRJMOD}/ecad/CLP-105-02-F-D)(options "")(descr ""))
+  (lib (name ECS-5032MV-120-BM-TR)(type KiCad)(uri ${KIPRJMOD}/ecad/ECS-5032MV-120-BM-TR)(options "")(descr ""))
+  (lib (name FT2232HQ-TRAY)(type KiCad)(uri ${KIPRJMOD}/ecad/FT2232HQ-TRAY)(options "")(descr ""))
+  (lib (name MAX3421EEHJ+)(type KiCad)(uri ${KIPRJMOD}/ecad/MAX3421EEHJ+)(options "")(descr ""))
+  (lib (name MTMS-105-02-T-D-002)(type KiCad)(uri ${KIPRJMOD}/ecad/MTMS-105-02-T-D-002)(options "")(descr ""))
+  (lib (name USB3075-30-A)(type KiCad)(uri ${KIPRJMOD}/ecad/USB3075-30-A)(options "")(descr ""))
+  (lib (name own)(type KiCad)(uri ${KIPRJMOD}/own)(options "")(descr ""))
+)

@@ -1,0 +1,1088 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L PCMCIA_USB:PCMCIA_BOARD U1
+U 1 1 607FF425
+P 6450 7700
+F 0 "U1" H 6480 14775 50  0000 C CNN
+F 1 "PCMCIA_BOARD" H 6480 14684 50  0000 C CNN
+F 2 "own:PCMCIA_CARD" H 6450 7700 50  0001 C CNN
+F 3 "" H 6450 7700 50  0001 C CNN
+	1    6450 7700
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74LVC8T245RHLRG4:74LVC8T245RHLRG4 IC4
+U 1 1 6083876B
+P 3400 2850
+F 0 "IC4" H 4050 3115 50  0000 C CNN
+F 1 "74LVC8T245RHLRG4" H 4050 3024 50  0000 C CNN
+F 2 "74LVC8T245RHLRG4:74LVC8T245RHLRG4" H 4550 2950 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74lvc8t245.pdf" H 4550 2850 50  0001 L CNN
+F 4 "IC TRNSLTR BIDIRECTIONAL 24VQFN" H 4550 2750 50  0001 L CNN "Description"
+F 5 "1" H 4550 2650 50  0001 L CNN "Height"
+F 6 "Texas Instruments" H 4550 2550 50  0001 L CNN "Manufacturer_Name"
+F 7 "74LVC8T245RHLRG4" H 4550 2450 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "595-74LVC8T245RHLRG4" H 4550 2350 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/74LVC8T245RHLRG4?qs=iSMark9AYDWjuN%252BD%252BJOSxg%3D%3D" H 4550 2250 50  0001 L CNN "Mouser Price/Stock"
+F 10 "74LVC8T245RHLRG4" H 4550 2150 50  0001 L CNN "Arrow Part Number"
+F 11 "https://www.arrow.com/en/products/74lvc8t245rhlrg4/texas-instruments" H 4550 2050 50  0001 L CNN "Arrow Price/Stock"
+	1    3400 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74LVC8T245RHLRG4:74LVC8T245RHLRG4 IC5
+U 1 1 60839F92
+P 3400 4800
+F 0 "IC5" H 4050 5065 50  0000 C CNN
+F 1 "74LVC8T245RHLRG4" H 4050 4974 50  0000 C CNN
+F 2 "74LVC8T245RHLRG4:74LVC8T245RHLRG4" H 4550 4900 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74lvc8t245.pdf" H 4550 4800 50  0001 L CNN
+F 4 "IC TRNSLTR BIDIRECTIONAL 24VQFN" H 4550 4700 50  0001 L CNN "Description"
+F 5 "1" H 4550 4600 50  0001 L CNN "Height"
+F 6 "Texas Instruments" H 4550 4500 50  0001 L CNN "Manufacturer_Name"
+F 7 "74LVC8T245RHLRG4" H 4550 4400 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "595-74LVC8T245RHLRG4" H 4550 4300 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/74LVC8T245RHLRG4?qs=iSMark9AYDWjuN%252BD%252BJOSxg%3D%3D" H 4550 4200 50  0001 L CNN "Mouser Price/Stock"
+F 10 "74LVC8T245RHLRG4" H 4550 4100 50  0001 L CNN "Arrow Part Number"
+F 11 "https://www.arrow.com/en/products/74lvc8t245rhlrg4/texas-instruments" H 4550 4000 50  0001 L CNN "Arrow Price/Stock"
+	1    3400 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74LVC8T245RHLRG4:74LVC8T245RHLRG4 IC1
+U 1 1 6083B43E
+P 800 850
+F 0 "IC1" H 1450 1115 50  0000 C CNN
+F 1 "74LVC8T245RHLRG4" H 1450 1024 50  0000 C CNN
+F 2 "74LVC8T245RHLRG4:74LVC8T245RHLRG4" H 1950 950 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74lvc8t245.pdf" H 1950 850 50  0001 L CNN
+F 4 "IC TRNSLTR BIDIRECTIONAL 24VQFN" H 1950 750 50  0001 L CNN "Description"
+F 5 "1" H 1950 650 50  0001 L CNN "Height"
+F 6 "Texas Instruments" H 1950 550 50  0001 L CNN "Manufacturer_Name"
+F 7 "74LVC8T245RHLRG4" H 1950 450 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "595-74LVC8T245RHLRG4" H 1950 350 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/74LVC8T245RHLRG4?qs=iSMark9AYDWjuN%252BD%252BJOSxg%3D%3D" H 1950 250 50  0001 L CNN "Mouser Price/Stock"
+F 10 "74LVC8T245RHLRG4" H 1950 150 50  0001 L CNN "Arrow Part Number"
+F 11 "https://www.arrow.com/en/products/74lvc8t245rhlrg4/texas-instruments" H 1950 50  50  0001 L CNN "Arrow Price/Stock"
+	1    800  850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74LVC8T245RHLRG4:74LVC8T245RHLRG4 IC2
+U 1 1 6083D6D9
+P 800 2850
+F 0 "IC2" H 1450 3115 50  0000 C CNN
+F 1 "74LVC8T245RHLRG4" H 1450 3024 50  0000 C CNN
+F 2 "74LVC8T245RHLRG4:74LVC8T245RHLRG4" H 1950 2950 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74lvc8t245.pdf" H 1950 2850 50  0001 L CNN
+F 4 "IC TRNSLTR BIDIRECTIONAL 24VQFN" H 1950 2750 50  0001 L CNN "Description"
+F 5 "1" H 1950 2650 50  0001 L CNN "Height"
+F 6 "Texas Instruments" H 1950 2550 50  0001 L CNN "Manufacturer_Name"
+F 7 "74LVC8T245RHLRG4" H 1950 2450 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "595-74LVC8T245RHLRG4" H 1950 2350 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/74LVC8T245RHLRG4?qs=iSMark9AYDWjuN%252BD%252BJOSxg%3D%3D" H 1950 2250 50  0001 L CNN "Mouser Price/Stock"
+F 10 "74LVC8T245RHLRG4" H 1950 2150 50  0001 L CNN "Arrow Part Number"
+F 11 "https://www.arrow.com/en/products/74lvc8t245rhlrg4/texas-instruments" H 1950 2050 50  0001 L CNN "Arrow Price/Stock"
+	1    800  2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 60856585
+P 6050 900
+F 0 "#PWR0101" H 6050 650 50  0001 C CNN
+F 1 "GND" V 6055 772 50  0000 R CNN
+F 2 "" H 6050 900 50  0001 C CNN
+F 3 "" H 6050 900 50  0001 C CNN
+	1    6050 900 
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 6085D1DC
+P 6050 7500
+F 0 "#PWR0102" H 6050 7250 50  0001 C CNN
+F 1 "GND" V 6055 7372 50  0000 R CNN
+F 2 "" H 6050 7500 50  0001 C CNN
+F 3 "" H 6050 7500 50  0001 C CNN
+	1    6050 7500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6100 7450 6050 7450
+Wire Wire Line
+	6050 7450 6050 7500
+Wire Wire Line
+	6050 7550 6100 7550
+Wire Wire Line
+	6050 7550 6050 7500
+Connection ~ 6050 7500
+Wire Wire Line
+	6100 950  6050 950 
+Wire Wire Line
+	6050 950  6050 900 
+Wire Wire Line
+	6050 900  6050 850 
+Wire Wire Line
+	6050 850  6100 850 
+Connection ~ 6050 900 
+Text HLabel 2100 1250 2    50   Input ~ 0
+P_D3
+Text HLabel 6100 1050 0    50   Input ~ 0
+P_D3
+Text HLabel 6100 1250 0    50   Input ~ 0
+P_D4
+Text HLabel 6100 1450 0    50   Input ~ 0
+P_D5
+Text HLabel 6100 1650 0    50   Input ~ 0
+P_D6
+Text HLabel 6100 1850 0    50   Input ~ 0
+P_D7
+Text HLabel 2100 1150 2    50   Input ~ 0
+P_D4
+Text HLabel 2100 1050 2    50   Input ~ 0
+P_D5
+Text HLabel 2100 950  2    50   Input ~ 0
+P_D6
+Text HLabel 2100 850  2    50   Input ~ 0
+P_D7
+Text HLabel 6100 2050 0    50   Input ~ 0
+P_CE1
+Text HLabel 6100 2350 0    50   Input ~ 0
+P_CE2
+Text HLabel 6100 2450 0    50   Input ~ 0
+P_OE
+Text HLabel 6100 2750 0    50   Input ~ 0
+P_IORD
+Text HLabel 6100 2950 0    50   Input ~ 0
+P_IOWR
+Text HLabel 6100 3650 0    50   Input ~ 0
+P_WE
+Text HLabel 6100 6150 0    50   Input ~ 0
+P_REG
+Text HLabel 6100 5550 0    50   Input ~ 0
+P_RESET
+Text HLabel 6100 2250 0    50   Input ~ 0
+P_A10
+Text HLabel 6100 2650 0    50   Input ~ 0
+P_A11
+Text HLabel 6100 2850 0    50   Input ~ 0
+P_A9
+Text HLabel 6100 3050 0    50   Input ~ 0
+P_A8
+Text HLabel 6100 3250 0    50   Input ~ 0
+P_A13
+Text HLabel 6100 3450 0    50   Input ~ 0
+P_A14
+Text HLabel 6100 4650 0    50   Input ~ 0
+P_A15
+Text HLabel 6100 4850 0    50   Input ~ 0
+P_A12
+Text HLabel 6100 5050 0    50   Input ~ 0
+P_A7
+Text HLabel 6100 5250 0    50   Input ~ 0
+P_A6
+Text HLabel 6100 5450 0    50   Input ~ 0
+P_A5
+Text HLabel 6100 5650 0    50   Input ~ 0
+P_A4
+Text HLabel 6100 5850 0    50   Input ~ 0
+P_A3
+Text HLabel 6100 6050 0    50   Input ~ 0
+P_A2
+Text HLabel 6100 6250 0    50   Input ~ 0
+P_A1
+Text HLabel 6100 6450 0    50   Input ~ 0
+P_A0
+$Comp
+L 74LVC8T245RHLRG4:74LVC8T245RHLRG4 IC3
+U 1 1 608348D3
+P 3400 900
+F 0 "IC3" H 4050 1165 50  0000 C CNN
+F 1 "74LVC8T245RHLRG4" H 4050 1074 50  0000 C CNN
+F 2 "74LVC8T245RHLRG4:74LVC8T245RHLRG4" H 4550 1000 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74lvc8t245.pdf" H 4550 900 50  0001 L CNN
+F 4 "IC TRNSLTR BIDIRECTIONAL 24VQFN" H 4550 800 50  0001 L CNN "Description"
+F 5 "1" H 4550 700 50  0001 L CNN "Height"
+F 6 "Texas Instruments" H 4550 600 50  0001 L CNN "Manufacturer_Name"
+F 7 "74LVC8T245RHLRG4" H 4550 500 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "595-74LVC8T245RHLRG4" H 4550 400 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/74LVC8T245RHLRG4?qs=iSMark9AYDWjuN%252BD%252BJOSxg%3D%3D" H 4550 300 50  0001 L CNN "Mouser Price/Stock"
+F 10 "74LVC8T245RHLRG4" H 4550 200 50  0001 L CNN "Arrow Part Number"
+F 11 "https://www.arrow.com/en/products/74lvc8t245rhlrg4/texas-instruments" H 4550 100 50  0001 L CNN "Arrow Price/Stock"
+	1    3400 900 
+	1    0    0    -1  
+$EndComp
+Text HLabel 2100 3250 2    50   Input ~ 0
+P_CE1
+Text HLabel 2100 3150 2    50   Input ~ 0
+P_A10
+Text HLabel 2100 3050 2    50   Input ~ 0
+P_CE2
+Text HLabel 2100 2950 2    50   Input ~ 0
+P_OE
+Text HLabel 2100 2850 2    50   Input ~ 0
+P_A11
+Text HLabel 800  4350 0    50   Input ~ 0
+P_IORD
+Text HLabel 800  4250 0    50   Input ~ 0
+P_A9
+Text HLabel 800  4150 0    50   Input ~ 0
+P_IOWR
+Text HLabel 4700 1300 2    50   Input ~ 0
+P_A8
+Text HLabel 4700 1200 2    50   Input ~ 0
+P_A13
+Text HLabel 4700 1100 2    50   Input ~ 0
+P_A14
+Text HLabel 4700 1000 2    50   Input ~ 0
+P_WE
+Text HLabel 4700 900  2    50   Input ~ 0
+P_A15
+Text HLabel 3400 2400 0    50   Input ~ 0
+P_A12
+Text HLabel 3400 2300 0    50   Input ~ 0
+P_A7
+Text HLabel 3400 2200 0    50   Input ~ 0
+P_A6
+Text HLabel 4700 3250 2    50   Input ~ 0
+P_A5
+Text HLabel 4700 3150 2    50   Input ~ 0
+P_RESET
+Text HLabel 4700 3050 2    50   Input ~ 0
+P_A4
+Text HLabel 4700 2950 2    50   Input ~ 0
+P_A3
+Text HLabel 4700 2850 2    50   Input ~ 0
+P_A2
+Text HLabel 3400 4350 0    50   Input ~ 0
+P_REG
+Text HLabel 3400 4250 0    50   Input ~ 0
+P_A1
+Text HLabel 3400 4150 0    50   Input ~ 0
+P_A0
+$Comp
+L power:+5V #PWR0103
+U 1 1 6093B298
+P 6050 4100
+F 0 "#PWR0103" H 6050 3950 50  0001 C CNN
+F 1 "+5V" V 6065 4228 50  0000 L CNN
+F 2 "" H 6050 4100 50  0001 C CNN
+F 3 "" H 6050 4100 50  0001 C CNN
+	1    6050 4100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6100 4150 6050 4150
+Wire Wire Line
+	6050 4150 6050 4100
+Wire Wire Line
+	6050 4050 6100 4050
+Connection ~ 6050 4100
+Wire Wire Line
+	6050 4100 6050 4050
+$Comp
+L power:GND #PWR0104
+U 1 1 60949F38
+P 3400 5900
+F 0 "#PWR0104" H 3400 5650 50  0001 C CNN
+F 1 "GND" V 3405 5772 50  0000 R CNN
+F 2 "" H 3400 5900 50  0001 C CNN
+F 3 "" H 3400 5900 50  0001 C CNN
+	1    3400 5900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3400 6000 3400 5900
+Connection ~ 3400 5900
+Wire Wire Line
+	3400 5900 3400 5800
+$Comp
+L power:GND #PWR0105
+U 1 1 6094CEB2
+P 3400 3950
+F 0 "#PWR0105" H 3400 3700 50  0001 C CNN
+F 1 "GND" V 3405 3822 50  0000 R CNN
+F 2 "" H 3400 3950 50  0001 C CNN
+F 3 "" H 3400 3950 50  0001 C CNN
+	1    3400 3950
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 6094D2A7
+P 3400 2000
+F 0 "#PWR0106" H 3400 1750 50  0001 C CNN
+F 1 "GND" V 3405 1872 50  0000 R CNN
+F 2 "" H 3400 2000 50  0001 C CNN
+F 3 "" H 3400 2000 50  0001 C CNN
+	1    3400 2000
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 6094E8D2
+P 800 1950
+F 0 "#PWR0107" H 800 1700 50  0001 C CNN
+F 1 "GND" V 805 1822 50  0000 R CNN
+F 2 "" H 800 1950 50  0001 C CNN
+F 3 "" H 800 1950 50  0001 C CNN
+	1    800  1950
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 6094F054
+P 800 3950
+F 0 "#PWR0108" H 800 3700 50  0001 C CNN
+F 1 "GND" V 805 3822 50  0000 R CNN
+F 2 "" H 800 3950 50  0001 C CNN
+F 3 "" H 800 3950 50  0001 C CNN
+	1    800  3950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	800  4050 800  3950
+Connection ~ 800  3950
+Wire Wire Line
+	800  3950 800  3850
+Wire Wire Line
+	800  2050 800  1950
+Connection ~ 800  1950
+Wire Wire Line
+	800  1950 800  1850
+Wire Wire Line
+	3400 2100 3400 2000
+Connection ~ 3400 2000
+Wire Wire Line
+	3400 2000 3400 1900
+Wire Wire Line
+	3400 4050 3400 3950
+Connection ~ 3400 3950
+Wire Wire Line
+	3400 3950 3400 3850
+$Comp
+L power:+5V #PWR0109
+U 1 1 60954B8E
+P 4700 1500
+F 0 "#PWR0109" H 4700 1350 50  0001 C CNN
+F 1 "+5V" V 4715 1628 50  0000 L CNN
+F 2 "" H 4700 1500 50  0001 C CNN
+F 3 "" H 4700 1500 50  0001 C CNN
+	1    4700 1500
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR0110
+U 1 1 60962522
+P 4700 3450
+F 0 "#PWR0110" H 4700 3300 50  0001 C CNN
+F 1 "+5V" V 4715 3578 50  0000 L CNN
+F 2 "" H 4700 3450 50  0001 C CNN
+F 3 "" H 4700 3450 50  0001 C CNN
+	1    4700 3450
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR0111
+U 1 1 60963DF0
+P 4700 5400
+F 0 "#PWR0111" H 4700 5250 50  0001 C CNN
+F 1 "+5V" V 4715 5528 50  0000 L CNN
+F 2 "" H 4700 5400 50  0001 C CNN
+F 3 "" H 4700 5400 50  0001 C CNN
+	1    4700 5400
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR0112
+U 1 1 60967EB9
+P 2100 3450
+F 0 "#PWR0112" H 2100 3300 50  0001 C CNN
+F 1 "+5V" V 2115 3578 50  0000 L CNN
+F 2 "" H 2100 3450 50  0001 C CNN
+F 3 "" H 2100 3450 50  0001 C CNN
+	1    2100 3450
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR0113
+U 1 1 60968ACD
+P 2100 1450
+F 0 "#PWR0113" H 2100 1300 50  0001 C CNN
+F 1 "+5V" V 2115 1578 50  0000 L CNN
+F 2 "" H 2100 1450 50  0001 C CNN
+F 3 "" H 2100 1450 50  0001 C CNN
+	1    2100 1450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2100 1550 2100 1450
+Connection ~ 2100 1450
+Wire Wire Line
+	2100 3550 2100 3450
+Connection ~ 2100 3450
+Wire Wire Line
+	4700 1600 4700 1500
+Connection ~ 4700 1500
+Wire Wire Line
+	4700 3550 4700 3450
+Connection ~ 4700 3450
+Wire Wire Line
+	4700 5500 4700 5400
+Connection ~ 4700 5400
+$Comp
+L power:+3V3 #PWR0114
+U 1 1 609734BD
+P 3400 4800
+F 0 "#PWR0114" H 3400 4650 50  0001 C CNN
+F 1 "+3V3" V 3415 4928 50  0000 L CNN
+F 2 "" H 3400 4800 50  0001 C CNN
+F 3 "" H 3400 4800 50  0001 C CNN
+	1    3400 4800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3V3 #PWR0115
+U 1 1 60979275
+P 3400 2850
+F 0 "#PWR0115" H 3400 2700 50  0001 C CNN
+F 1 "+3V3" V 3415 2978 50  0000 L CNN
+F 2 "" H 3400 2850 50  0001 C CNN
+F 3 "" H 3400 2850 50  0001 C CNN
+	1    3400 2850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3V3 #PWR0116
+U 1 1 6097B10D
+P 3400 900
+F 0 "#PWR0116" H 3400 750 50  0001 C CNN
+F 1 "+3V3" V 3415 1028 50  0000 L CNN
+F 2 "" H 3400 900 50  0001 C CNN
+F 3 "" H 3400 900 50  0001 C CNN
+	1    3400 900 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3V3 #PWR0117
+U 1 1 6097B785
+P 800 850
+F 0 "#PWR0117" H 800 700 50  0001 C CNN
+F 1 "+3V3" V 815 978 50  0000 L CNN
+F 2 "" H 800 850 50  0001 C CNN
+F 3 "" H 800 850 50  0001 C CNN
+	1    800  850 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3V3 #PWR0118
+U 1 1 6097BDEA
+P 800 2850
+F 0 "#PWR0118" H 800 2700 50  0001 C CNN
+F 1 "+3V3" V 815 2978 50  0000 L CNN
+F 2 "" H 800 2850 50  0001 C CNN
+F 3 "" H 800 2850 50  0001 C CNN
+	1    800  2850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0119
+U 1 1 6097EBA4
+P 4700 3350
+F 0 "#PWR0119" H 4700 3100 50  0001 C CNN
+F 1 "GND" V 4705 3222 50  0000 R CNN
+F 2 "" H 4700 3350 50  0001 C CNN
+F 3 "" H 4700 3350 50  0001 C CNN
+	1    4700 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0120
+U 1 1 60989F30
+P 4700 5300
+F 0 "#PWR0120" H 4700 5050 50  0001 C CNN
+F 1 "GND" V 4705 5172 50  0000 R CNN
+F 2 "" H 4700 5300 50  0001 C CNN
+F 3 "" H 4700 5300 50  0001 C CNN
+	1    4700 5300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0121
+U 1 1 6098BF2B
+P 4700 1400
+F 0 "#PWR0121" H 4700 1150 50  0001 C CNN
+F 1 "GND" V 4705 1272 50  0000 R CNN
+F 2 "" H 4700 1400 50  0001 C CNN
+F 3 "" H 4700 1400 50  0001 C CNN
+	1    4700 1400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0122
+U 1 1 6098E1DB
+P 2100 1350
+F 0 "#PWR0122" H 2100 1100 50  0001 C CNN
+F 1 "GND" V 2105 1222 50  0000 R CNN
+F 2 "" H 2100 1350 50  0001 C CNN
+F 3 "" H 2100 1350 50  0001 C CNN
+	1    2100 1350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0123
+U 1 1 6098E9C8
+P 2100 3350
+F 0 "#PWR0123" H 2100 3100 50  0001 C CNN
+F 1 "GND" V 2105 3222 50  0000 R CNN
+F 2 "" H 2100 3350 50  0001 C CNN
+F 3 "" H 2100 3350 50  0001 C CNN
+	1    2100 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0124
+U 1 1 6098F85D
+P 800 2950
+F 0 "#PWR0124" H 800 2700 50  0001 C CNN
+F 1 "GND" V 805 2822 50  0000 R CNN
+F 2 "" H 800 2950 50  0001 C CNN
+F 3 "" H 800 2950 50  0001 C CNN
+	1    800  2950
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0125
+U 1 1 60990BE3
+P 3400 2950
+F 0 "#PWR0125" H 3400 2700 50  0001 C CNN
+F 1 "GND" V 3405 2822 50  0000 R CNN
+F 2 "" H 3400 2950 50  0001 C CNN
+F 3 "" H 3400 2950 50  0001 C CNN
+	1    3400 2950
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0126
+U 1 1 60991423
+P 3400 1000
+F 0 "#PWR0126" H 3400 750 50  0001 C CNN
+F 1 "GND" V 3405 872 50  0000 R CNN
+F 2 "" H 3400 1000 50  0001 C CNN
+F 3 "" H 3400 1000 50  0001 C CNN
+	1    3400 1000
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3V3 #PWR0127
+U 1 1 60995A52
+P 3400 4900
+F 0 "#PWR0127" H 3400 4750 50  0001 C CNN
+F 1 "+3V3" V 3415 5028 50  0000 L CNN
+F 2 "" H 3400 4900 50  0001 C CNN
+F 3 "" H 3400 4900 50  0001 C CNN
+	1    3400 4900
+	0    -1   -1   0   
+$EndComp
+Text HLabel 6100 3850 0    50   Input ~ 0
+P_READY
+Text HLabel 6100 7250 0    50   Input ~ 0
+P_WP
+Text HLabel 6100 5750 0    50   Input ~ 0
+P_WAIT
+Text HLabel 6100 5950 0    50   Input ~ 0
+P_INPACK
+Text HLabel 4700 5200 2    50   Input ~ 0
+P_READY
+Text HLabel 4700 5100 2    50   Input ~ 0
+P_WAIT
+Text HLabel 4700 5000 2    50   Input ~ 0
+P_INPACK
+Text HLabel 4700 4900 2    50   Input ~ 0
+P_WP
+Text HLabel 6100 6650 0    50   Input ~ 0
+P_D0
+Text HLabel 6100 6850 0    50   Input ~ 0
+P_D1
+Text HLabel 6100 7050 0    50   Input ~ 0
+P_D2
+Text HLabel 800  2350 0    50   Input ~ 0
+P_D0
+Text HLabel 800  2250 0    50   Input ~ 0
+P_D1
+Text HLabel 800  2150 0    50   Input ~ 0
+P_D2
+$Comp
+L Device:C C1
+U 1 1 609D21CD
+P 1000 6000
+F 0 "C1" H 1115 6046 50  0000 L CNN
+F 1 "100nF" H 1115 5955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 1038 5850 50  0001 C CNN
+F 3 "~" H 1000 6000 50  0001 C CNN
+	1    1000 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 609D36B7
+P 1000 6750
+F 0 "C2" H 1115 6796 50  0000 L CNN
+F 1 "100nF" H 1115 6705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 1038 6600 50  0001 C CNN
+F 3 "~" H 1000 6750 50  0001 C CNN
+	1    1000 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0128
+U 1 1 609D8E7E
+P 1000 6900
+F 0 "#PWR0128" H 1000 6650 50  0001 C CNN
+F 1 "GND" H 1005 6727 50  0000 C CNN
+F 2 "" H 1000 6900 50  0001 C CNN
+F 3 "" H 1000 6900 50  0001 C CNN
+	1    1000 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0129
+U 1 1 609D949E
+P 1000 6150
+F 0 "#PWR0129" H 1000 5900 50  0001 C CNN
+F 1 "GND" H 1005 5977 50  0000 C CNN
+F 2 "" H 1000 6150 50  0001 C CNN
+F 3 "" H 1000 6150 50  0001 C CNN
+	1    1000 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0130
+U 1 1 609D9880
+P 1000 5850
+F 0 "#PWR0130" H 1000 5700 50  0001 C CNN
+F 1 "+5V" H 1015 6023 50  0000 C CNN
+F 2 "" H 1000 5850 50  0001 C CNN
+F 3 "" H 1000 5850 50  0001 C CNN
+	1    1000 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0131
+U 1 1 609D9CDA
+P 1000 6600
+F 0 "#PWR0131" H 1000 6450 50  0001 C CNN
+F 1 "+3V3" H 1015 6773 50  0000 C CNN
+F 2 "" H 1000 6600 50  0001 C CNN
+F 3 "" H 1000 6600 50  0001 C CNN
+	1    1000 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 609E02E0
+P 1450 6000
+F 0 "C3" H 1565 6046 50  0000 L CNN
+F 1 "100nF" H 1565 5955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 1488 5850 50  0001 C CNN
+F 3 "~" H 1450 6000 50  0001 C CNN
+	1    1450 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 609E02E6
+P 1450 6750
+F 0 "C4" H 1565 6796 50  0000 L CNN
+F 1 "100nF" H 1565 6705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 1488 6600 50  0001 C CNN
+F 3 "~" H 1450 6750 50  0001 C CNN
+	1    1450 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0132
+U 1 1 609E02EC
+P 1450 6900
+F 0 "#PWR0132" H 1450 6650 50  0001 C CNN
+F 1 "GND" H 1455 6727 50  0000 C CNN
+F 2 "" H 1450 6900 50  0001 C CNN
+F 3 "" H 1450 6900 50  0001 C CNN
+	1    1450 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0133
+U 1 1 609E02F2
+P 1450 6150
+F 0 "#PWR0133" H 1450 5900 50  0001 C CNN
+F 1 "GND" H 1455 5977 50  0000 C CNN
+F 2 "" H 1450 6150 50  0001 C CNN
+F 3 "" H 1450 6150 50  0001 C CNN
+	1    1450 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0134
+U 1 1 609E02F8
+P 1450 5850
+F 0 "#PWR0134" H 1450 5700 50  0001 C CNN
+F 1 "+5V" H 1465 6023 50  0000 C CNN
+F 2 "" H 1450 5850 50  0001 C CNN
+F 3 "" H 1450 5850 50  0001 C CNN
+	1    1450 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0135
+U 1 1 609E02FE
+P 1450 6600
+F 0 "#PWR0135" H 1450 6450 50  0001 C CNN
+F 1 "+3V3" H 1465 6773 50  0000 C CNN
+F 2 "" H 1450 6600 50  0001 C CNN
+F 3 "" H 1450 6600 50  0001 C CNN
+	1    1450 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C5
+U 1 1 609E1296
+P 1850 6000
+F 0 "C5" H 1965 6046 50  0000 L CNN
+F 1 "100nF" H 1965 5955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 1888 5850 50  0001 C CNN
+F 3 "~" H 1850 6000 50  0001 C CNN
+	1    1850 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C6
+U 1 1 609E129C
+P 1850 6750
+F 0 "C6" H 1965 6796 50  0000 L CNN
+F 1 "100nF" H 1965 6705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 1888 6600 50  0001 C CNN
+F 3 "~" H 1850 6750 50  0001 C CNN
+	1    1850 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0136
+U 1 1 609E12A2
+P 1850 6900
+F 0 "#PWR0136" H 1850 6650 50  0001 C CNN
+F 1 "GND" H 1855 6727 50  0000 C CNN
+F 2 "" H 1850 6900 50  0001 C CNN
+F 3 "" H 1850 6900 50  0001 C CNN
+	1    1850 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0137
+U 1 1 609E12A8
+P 1850 6150
+F 0 "#PWR0137" H 1850 5900 50  0001 C CNN
+F 1 "GND" H 1855 5977 50  0000 C CNN
+F 2 "" H 1850 6150 50  0001 C CNN
+F 3 "" H 1850 6150 50  0001 C CNN
+	1    1850 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0138
+U 1 1 609E12AE
+P 1850 5850
+F 0 "#PWR0138" H 1850 5700 50  0001 C CNN
+F 1 "+5V" H 1865 6023 50  0000 C CNN
+F 2 "" H 1850 5850 50  0001 C CNN
+F 3 "" H 1850 5850 50  0001 C CNN
+	1    1850 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0139
+U 1 1 609E12B4
+P 1850 6600
+F 0 "#PWR0139" H 1850 6450 50  0001 C CNN
+F 1 "+3V3" H 1865 6773 50  0000 C CNN
+F 2 "" H 1850 6600 50  0001 C CNN
+F 3 "" H 1850 6600 50  0001 C CNN
+	1    1850 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C7
+U 1 1 609E1FB0
+P 2250 6000
+F 0 "C7" H 2365 6046 50  0000 L CNN
+F 1 "100nF" H 2365 5955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 2288 5850 50  0001 C CNN
+F 3 "~" H 2250 6000 50  0001 C CNN
+	1    2250 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C8
+U 1 1 609E1FB6
+P 2250 6750
+F 0 "C8" H 2365 6796 50  0000 L CNN
+F 1 "100nF" H 2365 6705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 2288 6600 50  0001 C CNN
+F 3 "~" H 2250 6750 50  0001 C CNN
+	1    2250 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0140
+U 1 1 609E1FBC
+P 2250 6900
+F 0 "#PWR0140" H 2250 6650 50  0001 C CNN
+F 1 "GND" H 2255 6727 50  0000 C CNN
+F 2 "" H 2250 6900 50  0001 C CNN
+F 3 "" H 2250 6900 50  0001 C CNN
+	1    2250 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0141
+U 1 1 609E1FC2
+P 2250 6150
+F 0 "#PWR0141" H 2250 5900 50  0001 C CNN
+F 1 "GND" H 2255 5977 50  0000 C CNN
+F 2 "" H 2250 6150 50  0001 C CNN
+F 3 "" H 2250 6150 50  0001 C CNN
+	1    2250 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0142
+U 1 1 609E1FC8
+P 2250 5850
+F 0 "#PWR0142" H 2250 5700 50  0001 C CNN
+F 1 "+5V" H 2265 6023 50  0000 C CNN
+F 2 "" H 2250 5850 50  0001 C CNN
+F 3 "" H 2250 5850 50  0001 C CNN
+	1    2250 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0143
+U 1 1 609E1FCE
+P 2250 6600
+F 0 "#PWR0143" H 2250 6450 50  0001 C CNN
+F 1 "+3V3" H 2265 6773 50  0000 C CNN
+F 2 "" H 2250 6600 50  0001 C CNN
+F 3 "" H 2250 6600 50  0001 C CNN
+	1    2250 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C9
+U 1 1 609E2E84
+P 2700 6000
+F 0 "C9" H 2815 6046 50  0000 L CNN
+F 1 "100nF" H 2815 5955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 2738 5850 50  0001 C CNN
+F 3 "~" H 2700 6000 50  0001 C CNN
+	1    2700 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C10
+U 1 1 609E2E8A
+P 2700 6750
+F 0 "C10" H 2815 6796 50  0000 L CNN
+F 1 "100nF" H 2815 6705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 2738 6600 50  0001 C CNN
+F 3 "~" H 2700 6750 50  0001 C CNN
+	1    2700 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0144
+U 1 1 609E2E90
+P 2700 6900
+F 0 "#PWR0144" H 2700 6650 50  0001 C CNN
+F 1 "GND" H 2705 6727 50  0000 C CNN
+F 2 "" H 2700 6900 50  0001 C CNN
+F 3 "" H 2700 6900 50  0001 C CNN
+	1    2700 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0145
+U 1 1 609E2E96
+P 2700 6150
+F 0 "#PWR0145" H 2700 5900 50  0001 C CNN
+F 1 "GND" H 2705 5977 50  0000 C CNN
+F 2 "" H 2700 6150 50  0001 C CNN
+F 3 "" H 2700 6150 50  0001 C CNN
+	1    2700 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0146
+U 1 1 609E2E9C
+P 2700 5850
+F 0 "#PWR0146" H 2700 5700 50  0001 C CNN
+F 1 "+5V" H 2715 6023 50  0000 C CNN
+F 2 "" H 2700 5850 50  0001 C CNN
+F 3 "" H 2700 5850 50  0001 C CNN
+	1    2700 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0147
+U 1 1 609E2EA2
+P 2700 6600
+F 0 "#PWR0147" H 2700 6450 50  0001 C CNN
+F 1 "+3V3" H 2715 6773 50  0000 C CNN
+F 2 "" H 2700 6600 50  0001 C CNN
+F 3 "" H 2700 6600 50  0001 C CNN
+	1    2700 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0148
+U 1 1 609FF896
+P 6850 7550
+F 0 "#PWR0148" H 6850 7300 50  0001 C CNN
+F 1 "GND" H 6855 7377 50  0000 C CNN
+F 2 "" H 6850 7550 50  0001 C CNN
+F 3 "" H 6850 7550 50  0001 C CNN
+	1    6850 7550
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 7200 1050 1750 2750
+U 60A42C75
+F0 "FPGA" 50
+F1 "FPGA.sch" 50
+$EndSheet
+Text GLabel 800  950  0    50   Input ~ 0
+F_DDIR
+Text GLabel 800  1050 0    50   Input ~ 0
+F_D3
+Text GLabel 800  1150 0    50   Input ~ 0
+F_D4
+Text GLabel 800  1250 0    50   Input ~ 0
+F_D5
+Text GLabel 800  1350 0    50   Input ~ 0
+F_D6
+Text GLabel 800  1450 0    50   Input ~ 0
+F_D7
+Text GLabel 800  1550 0    50   Input ~ 0
+F_D0
+Text GLabel 800  1650 0    50   Input ~ 0
+F_D1
+Text GLabel 800  1750 0    50   Input ~ 0
+F_D2
+Text GLabel 3400 5000 0    50   Input ~ 0
+F_READY
+Text GLabel 3400 5100 0    50   Input ~ 0
+F_WAIT
+Text GLabel 3400 5200 0    50   Input ~ 0
+F_INPACK
+Text GLabel 3400 5300 0    50   Input ~ 0
+F_WP
+Text GLabel 3400 1100 0    50   Input ~ 0
+F_A8
+Text GLabel 3400 1200 0    50   Input ~ 0
+F_A13
+Text GLabel 3400 1300 0    50   Input ~ 0
+F_A14
+Text GLabel 3400 1400 0    50   Input ~ 0
+F_WE
+Text GLabel 3400 1500 0    50   Input ~ 0
+F_A15
+Text GLabel 3400 1600 0    50   Input ~ 0
+F_A12
+Text GLabel 3400 1700 0    50   Input ~ 0
+F_A7
+Text GLabel 3400 1800 0    50   Input ~ 0
+F_A6
+Text GLabel 3400 3050 0    50   Input ~ 0
+F_A5
+Text GLabel 3400 3150 0    50   Input ~ 0
+F_RESET
+Text GLabel 3400 3250 0    50   Input ~ 0
+F_A4
+Text GLabel 3400 3350 0    50   Input ~ 0
+F_A3
+Text GLabel 3400 3450 0    50   Input ~ 0
+F_A2
+Text GLabel 3400 3550 0    50   Input ~ 0
+F_REG
+Text GLabel 3400 3650 0    50   Input ~ 0
+F_A1
+Text GLabel 3400 3750 0    50   Input ~ 0
+F_A0
+Text GLabel 800  3050 0    50   Input ~ 0
+F_CE1
+Text GLabel 800  3150 0    50   Input ~ 0
+F_A10
+Text GLabel 800  3250 0    50   Input ~ 0
+F_CE2
+Text GLabel 800  3350 0    50   Input ~ 0
+F_OE
+Text GLabel 800  3450 0    50   Input ~ 0
+F_A11
+Text GLabel 800  3550 0    50   Input ~ 0
+F_IORD
+Text GLabel 800  3650 0    50   Input ~ 0
+F_A9
+Text GLabel 800  3750 0    50   Input ~ 0
+F_IOWR
+$Comp
+L Switch:SW_Push_Open SW1
+U 1 1 60DE4646
+P 4900 7350
+F 0 "SW1" H 4900 7565 50  0000 C CNN
+F 1 "SW_Push_Open" H 4900 7474 50  0000 C CNN
+F 2 "own:KSM1131" H 4900 7550 50  0001 C CNN
+F 3 "~" H 4900 7550 50  0001 C CNN
+	1    4900 7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 60DE63CD
+P 4700 7350
+F 0 "#PWR07" H 4700 7100 50  0001 C CNN
+F 1 "GND" H 4705 7177 50  0000 C CNN
+F 2 "" H 4700 7350 50  0001 C CNN
+F 3 "" H 4700 7350 50  0001 C CNN
+	1    4700 7350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 7350 5600 7350
+Wire Wire Line
+	6100 1150 5600 1150
+Wire Wire Line
+	5600 1150 5600 7350
+Connection ~ 5600 7350
+Wire Wire Line
+	5600 7350 6100 7350
+$Sheet
+S 9150 1050 1700 2750
+U 60E07D1B
+F0 "USBH" 50
+F1 "usbh.sch" 50
+$EndSheet
+$EndSCHEMATC
