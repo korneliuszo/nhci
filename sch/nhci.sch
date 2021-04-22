@@ -1075,7 +1075,7 @@ Wire Wire Line
 Wire Wire Line
 	6100 1150 5600 1150
 Wire Wire Line
-	5600 1150 5600 7350
+	5600 1150 5600 7100
 Connection ~ 5600 7350
 Wire Wire Line
 	5600 7350 6100 7350
@@ -1301,4 +1301,29 @@ F 3 "" H 8700 4300 50  0001 C CNN
 $EndComp
 Text GLabel 9000 4300 2    50   Input ~ 0
 F_READY
+$Comp
+L Jumper:SolderJumper_2_Bridged JP1
+U 1 1 60FACB1B
+P 5450 7100
+F 0 "JP1" H 5450 7305 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 5450 7214 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged2Bar_RoundedPad1.0x1.5mm" H 5450 7100 50  0001 C CNN
+F 3 "~" H 5450 7100 50  0001 C CNN
+	1    5450 7100
+	1    0    0    -1  
+$EndComp
+Connection ~ 5600 7100
+Wire Wire Line
+	5600 7100 5600 7350
+$Comp
+L power:GND #PWR0194
+U 1 1 60FAD98F
+P 5300 7100
+F 0 "#PWR0194" H 5300 6850 50  0001 C CNN
+F 1 "GND" H 5305 6927 50  0000 C CNN
+F 2 "" H 5300 7100 50  0001 C CNN
+F 3 "" H 5300 7100 50  0001 C CNN
+	1    5300 7100
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
