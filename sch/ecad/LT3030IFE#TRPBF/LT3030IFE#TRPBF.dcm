@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP LT3030IFE#TRPBF
+D Dual 750mA/250mA Low Dropout, Low Noise, Micropower Linear Regulator
+K
+F https://www.arrow.com/en/products/lt3030ifetrpbf/analog-devices
+$ENDCMP
+#
+#End Doc Library

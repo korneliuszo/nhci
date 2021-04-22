@@ -7,4 +7,5 @@
   (lib (name MTMS-105-02-T-D-002)(type KiCad)(uri ${KIPRJMOD}/ecad/MTMS-105-02-T-D-002)(options "")(descr ""))
   (lib (name USB3075-30-A)(type KiCad)(uri ${KIPRJMOD}/ecad/USB3075-30-A)(options "")(descr ""))
   (lib (name own)(type KiCad)(uri ${KIPRJMOD}/own)(options "")(descr ""))
+  (lib (name LT3030IFE#TRPBF)(type KiCad)(uri ${KIPRJMOD}/ecad/LT3030IFE#TRPBF)(options "")(descr ""))
 )
