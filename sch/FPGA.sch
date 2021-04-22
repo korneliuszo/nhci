@@ -712,7 +712,7 @@ Wire Wire Line
 Text GLabel 4550 6950 2    50   Input ~ 0
 12MHz
 $Sheet
-S 8600 5150 1450 750 
+S 5100 6700 1450 750 
 U 60E6B938
 F0 "PWR" 50
 F1 "pwr.sch" 50
@@ -731,4 +731,145 @@ Text GLabel 5150 4150 0    50   Input ~ 0
 U_INT
 Text GLabel 5150 3950 0    50   Input ~ 0
 U_GPX
+$Comp
+L CLP-105-02-F-D:CLP-105-02-F-D J1
+U 1 1 60FC32F7
+P 9200 5350
+F 0 "J1" H 9650 5615 50  0000 C CNN
+F 1 "CLP-105-02-F-D" H 9650 5524 50  0000 C CNN
+F 2 "CLP-105-02-F-D:CLP-105-02-XXX-D" H 9950 5450 50  0001 L CNN
+F 3 "http://suddendocs.samtec.com/prints/erm8-xxx-xx.x-xxx-dv-xxxx-xx-mkt.pdf" H 9950 5350 50  0001 L CNN
+F 4 "10 Position Connector Header, Center Strip Contacts Surface Mount" H 9950 5250 50  0001 L CNN "Description"
+F 5 "" H 9950 5150 50  0001 L CNN "Height"
+F 6 "SAMTEC" H 9950 5050 50  0001 L CNN "Manufacturer_Name"
+F 7 "CLP-105-02-F-D" H 9950 4950 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "200-CLP10502FD" H 9950 4850 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.co.uk/ProductDetail/Samtec/CLP-105-02-F-D?qs=2tpXfLKpFkhlColP9v%252BhkA%3D%3D" H 9950 4750 50  0001 L CNN "Mouser Price/Stock"
+F 10 "CLP-105-02-F-D" H 9950 4650 50  0001 L CNN "Arrow Part Number"
+F 11 "https://www.arrow.com/en/products/clp-105-02-f-d/samtec" H 9950 4550 50  0001 L CNN "Arrow Price/Stock"
+	1    9200 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 3950 8800 3950
+Wire Wire Line
+	8800 3950 8800 6000
+Wire Wire Line
+	8800 6000 10100 6000
+Wire Wire Line
+	10100 6000 10100 5750
+Connection ~ 9150 3950
+Wire Wire Line
+	9100 4050 8900 4050
+Wire Wire Line
+	8900 4050 8900 5750
+Wire Wire Line
+	8900 5750 9200 5750
+Connection ~ 9100 4050
+$Comp
+L power:+3V3 #PWR0195
+U 1 1 6103CF53
+P 9200 5650
+F 0 "#PWR0195" H 9200 5500 50  0001 C CNN
+F 1 "+3V3" V 9215 5778 50  0000 L CNN
+F 2 "" H 9200 5650 50  0001 C CNN
+F 3 "" H 9200 5650 50  0001 C CNN
+	1    9200 5650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10450 3950 10450 5100
+Wire Wire Line
+	10450 5100 9100 5100
+Wire Wire Line
+	9100 5100 9100 5550
+Wire Wire Line
+	9100 5550 9200 5550
+Connection ~ 10450 3950
+Wire Wire Line
+	9050 4150 9050 5450
+Wire Wire Line
+	9050 5450 9200 5450
+Connection ~ 9050 4150
+$Comp
+L power:+5V #PWR0196
+U 1 1 61049926
+P 9200 5350
+F 0 "#PWR0196" H 9200 5200 50  0001 C CNN
+F 1 "+5V" H 9215 5523 50  0000 C CNN
+F 2 "" H 9200 5350 50  0001 C CNN
+F 3 "" H 9200 5350 50  0001 C CNN
+	1    9200 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0197
+U 1 1 6104A693
+P 10100 5650
+F 0 "#PWR0197" H 10100 5400 50  0001 C CNN
+F 1 "GND" V 10105 5522 50  0000 R CNN
+F 2 "" H 10100 5650 50  0001 C CNN
+F 3 "" H 10100 5650 50  0001 C CNN
+	1    10100 5650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R22
+U 1 1 6105683F
+P 3400 800
+F 0 "R22" H 3470 846 50  0000 L CNN
+F 1 "R" H 3470 755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 3330 800 50  0001 C CNN
+F 3 "~" H 3400 800 50  0001 C CNN
+	1    3400 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R21
+U 1 1 61057B92
+P 3150 800
+F 0 "R21" H 3220 846 50  0000 L CNN
+F 1 "R" H 3220 755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 3080 800 50  0001 C CNN
+F 3 "~" H 3150 800 50  0001 C CNN
+	1    3150 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR021
+U 1 1 61058AAB
+P 3150 650
+F 0 "#PWR021" H 3150 500 50  0001 C CNN
+F 1 "+3V3" H 3165 823 50  0000 C CNN
+F 2 "" H 3150 650 50  0001 C CNN
+F 3 "" H 3150 650 50  0001 C CNN
+	1    3150 650 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR022
+U 1 1 610599A2
+P 3400 650
+F 0 "#PWR022" H 3400 500 50  0001 C CNN
+F 1 "+3V3" H 3415 823 50  0000 C CNN
+F 2 "" H 3400 650 50  0001 C CNN
+F 3 "" H 3400 650 50  0001 C CNN
+	1    3400 650 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 1050 3150 1050
+Wire Wire Line
+	3150 1050 3150 950 
+Text GLabel 3400 950  0    50   Input ~ 0
+CDONE
+Text GLabel 3150 1050 0    50   Input ~ 0
+CRESET
+Text GLabel 10100 5450 2    50   Input ~ 0
+CRESET
+Text GLabel 10100 5350 2    50   Input ~ 0
+CDONE
+Wire Wire Line
+	10100 5550 10100 5650
+Connection ~ 10100 5650
 $EndSCHEMATC
