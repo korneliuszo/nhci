@@ -10,4 +10,5 @@
   (lib (name PCMCIA_USB)(type Legacy)(uri ${KIPRJMOD}/own/PCMCIA_USB.lib)(options "")(descr ""))
   (lib (name Lattice_iCE_FPGA)(type Legacy)(uri ${KIPRJMOD}/KiCad-Schematic-Symbol-Libraries/Lattice_iCE_FPGA.lib)(options "")(descr ""))
   (lib (name LT3030IFE#TRPBF)(type Legacy)(uri ${KIPRJMOD}/ecad/LT3030IFE#TRPBF/LT3030IFE#TRPBF.lib)(options "")(descr ""))
+  (lib (name LM3526M)(type Legacy)(uri ${KIPRJMOD}/own/LM3526M.lib)(options "")(descr ""))
 )
