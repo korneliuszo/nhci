@@ -717,4 +717,18 @@ U 60E6B938
 F0 "PWR" 50
 F1 "pwr.sch" 50
 $EndSheet
+Text GLabel 5150 4550 0    50   Input ~ 0
+U_MOSI
+Text GLabel 5150 4350 0    50   Input ~ 0
+U_MISO
+Text GLabel 5150 5350 0    50   Input ~ 0
+U_SS
+Text GLabel 5150 4750 0    50   Input ~ 0
+U_SCLK
+Text GLabel 5150 4950 0    50   Input ~ 0
+U_RES
+Text GLabel 5150 4150 0    50   Input ~ 0
+U_INT
+Text GLabel 5150 3950 0    50   Input ~ 0
+U_GPX
 $EndSCHEMATC
