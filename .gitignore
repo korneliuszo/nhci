@@ -3,3 +3,5 @@ drv/build
 .project
 .settings
 *-bak
+fw/build
+.swp

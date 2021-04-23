@@ -1,3 +1,6 @@
 [submodule "sch/KiCad-Schematic-Symbol-Libraries"]
 	path = sch/KiCad-Schematic-Symbol-Libraries
 	url = https://github.com/xesscorp/KiCad-Schematic-Symbol-Libraries
+[submodule "fw/ice40-cmake"]
+	path = fw/ice40-cmake
+	url = https://github.com/korneliuszo/ice40-cmake.git
