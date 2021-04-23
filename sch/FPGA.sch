@@ -373,17 +373,6 @@ Wire Wire Line
 Wire Wire Line
 	9050 4150 9200 4150
 $Comp
-L Diode:LL4148 D1
-U 1 1 60B8313E
-P 9500 1650
-F 0 "D1" H 9500 1433 50  0000 C CNN
-F 1 "LL4148" H 9500 1524 50  0000 C CNN
-F 2 "Diode_SMD:D_MiniMELF" H 9500 1475 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/85557/ll4148.pdf" H 9500 1650 50  0001 C CNN
-	1    9500 1650
-	-1   0    0    1   
-$EndComp
-$Comp
 L power:+3V3 #PWR0163
 U 1 1 60B87561
 P 9350 1550
@@ -406,10 +395,7 @@ F 3 "" H 9650 1150 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	9650 1550 9350 1550
-Wire Wire Line
-	9350 1650 9350 1550
-Connection ~ 9350 1550
+	9650 1550 9450 1550
 Wire Wire Line
 	9650 1450 9650 1350
 Wire Wire Line
@@ -872,4 +858,24 @@ CDONE
 Wire Wire Line
 	10100 5550 10100 5650
 Connection ~ 10100 5650
+$Comp
+L Diode:BAT54S D1
+U 1 1 6083AC98
+P 9300 1650
+F 0 "D1" H 9300 1875 50  0000 C CNN
+F 1 "BAT54S" H 9300 1784 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 9375 1775 50  0001 L CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds11005.pdf" H 9180 1650 50  0001 C CNN
+	1    9300 1650
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	9300 1450 9450 1450
+Wire Wire Line
+	9450 1450 9450 1550
+Connection ~ 9450 1550
+Wire Wire Line
+	9450 1550 9350 1550
+Wire Wire Line
+	9600 1650 9650 1650
 $EndSCHEMATC
