@@ -375,12 +375,12 @@ Wire Wire Line
 $Comp
 L power:+3V3 #PWR0163
 U 1 1 60B87561
-P 9350 1550
-F 0 "#PWR0163" H 9350 1400 50  0001 C CNN
-F 1 "+3V3" H 9365 1723 50  0000 C CNN
-F 2 "" H 9350 1550 50  0001 C CNN
-F 3 "" H 9350 1550 50  0001 C CNN
-	1    9350 1550
+P 9300 1450
+F 0 "#PWR0163" H 9300 1300 50  0001 C CNN
+F 1 "+3V3" H 9315 1623 50  0000 C CNN
+F 2 "" H 9300 1450 50  0001 C CNN
+F 3 "" H 9300 1450 50  0001 C CNN
+	1    9300 1450
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -394,8 +394,6 @@ F 3 "" H 9650 1150 50  0001 C CNN
 	1    9650 1150
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	9650 1550 9450 1550
 Wire Wire Line
 	9650 1450 9650 1350
 Wire Wire Line
@@ -484,19 +482,6 @@ F 3 "" H 8900 2200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR?
-U 1 1 60C087CD
-P 8900 1900
-AR Path="/60C087CD" Ref="#PWR?"  Part="1" 
-AR Path="/60A42C75/60C087CD" Ref="#PWR03"  Part="1" 
-F 0 "#PWR03" H 8900 1750 50  0001 C CNN
-F 1 "+3V3" H 8915 2073 50  0000 C CNN
-F 2 "" H 8900 1900 50  0001 C CNN
-F 3 "" H 8900 1900 50  0001 C CNN
-	1    8900 1900
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C C?
 U 1 1 60C1F86D
 P 9300 2050
@@ -523,19 +508,6 @@ F 3 "" H 9300 2200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR?
-U 1 1 60C1F879
-P 9300 1900
-AR Path="/60C1F879" Ref="#PWR?"  Part="1" 
-AR Path="/60A42C75/60C1F879" Ref="#PWR05"  Part="1" 
-F 0 "#PWR05" H 9300 1750 50  0001 C CNN
-F 1 "+3V3" H 9315 2073 50  0000 C CNN
-F 2 "" H 9300 1900 50  0001 C CNN
-F 3 "" H 9300 1900 50  0001 C CNN
-	1    9300 1900
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C C?
 U 1 1 60C21622
 P 8450 2050
@@ -559,19 +531,6 @@ F 1 "GND" H 8455 2027 50  0000 C CNN
 F 2 "" H 8450 2200 50  0001 C CNN
 F 3 "" H 8450 2200 50  0001 C CNN
 	1    8450 2200
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR?
-U 1 1 60C2162E
-P 8450 1900
-AR Path="/60C2162E" Ref="#PWR?"  Part="1" 
-AR Path="/60A42C75/60C2162E" Ref="#PWR01"  Part="1" 
-F 0 "#PWR01" H 8450 1750 50  0001 C CNN
-F 1 "+3V3" H 8465 2073 50  0000 C CNN
-F 2 "" H 8450 1900 50  0001 C CNN
-F 3 "" H 8450 1900 50  0001 C CNN
-	1    8450 1900
 	1    0    0    -1  
 $EndComp
 Text GLabel 3400 4450 0    50   Input ~ 0
@@ -870,12 +829,49 @@ F 3 "https://www.diodes.com/assets/Datasheets/ds11005.pdf" H 9180 1650 50  0001 
 	1    0    0    1   
 $EndComp
 Wire Wire Line
-	9300 1450 9450 1450
-Wire Wire Line
-	9450 1450 9450 1550
-Connection ~ 9450 1550
-Wire Wire Line
-	9450 1550 9350 1550
-Wire Wire Line
 	9600 1650 9650 1650
+$Comp
+L power:+1V2 #PWR?
+U 1 1 608E607D
+P 9650 1550
+F 0 "#PWR?" H 9650 1400 50  0001 C CNN
+F 1 "+1V2" V 9665 1678 50  0000 L CNN
+F 2 "" H 9650 1550 50  0001 C CNN
+F 3 "" H 9650 1550 50  0001 C CNN
+	1    9650 1550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+1V2 #PWR?
+U 1 1 6090D69B
+P 8450 1900
+F 0 "#PWR?" H 8450 1750 50  0001 C CNN
+F 1 "+1V2" H 8465 2073 50  0000 C CNN
+F 2 "" H 8450 1900 50  0001 C CNN
+F 3 "" H 8450 1900 50  0001 C CNN
+	1    8450 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+1V2 #PWR?
+U 1 1 6090EE4F
+P 8900 1900
+F 0 "#PWR?" H 8900 1750 50  0001 C CNN
+F 1 "+1V2" H 8915 2073 50  0000 C CNN
+F 2 "" H 8900 1900 50  0001 C CNN
+F 3 "" H 8900 1900 50  0001 C CNN
+	1    8900 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+1V2 #PWR?
+U 1 1 60910275
+P 9300 1900
+F 0 "#PWR?" H 9300 1750 50  0001 C CNN
+F 1 "+1V2" H 9315 2073 50  0000 C CNN
+F 2 "" H 9300 1900 50  0001 C CNN
+F 3 "" H 9300 1900 50  0001 C CNN
+	1    9300 1900
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
