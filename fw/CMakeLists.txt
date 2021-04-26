@@ -29,3 +29,11 @@ ice40_synth(
 	${COMMON_TOP}
 )
 
+find_package(verilator HINTS $ENV{VERILATOR_ROOT} ${VERILATOR_ROOT})
+add_executable(sim1 sim1_main.cpp)
+verilate(sim1 
+	SOURCES
+		top.v
+	INCLUDE_DIRS
+		$ENV{HOME}/.apio/packages/toolchain-verilator/share
+)
