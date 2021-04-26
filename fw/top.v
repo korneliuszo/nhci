@@ -1,6 +1,6 @@
 module top(
 	input wire CLK,
-	output [0:0] D
+	output reg [0:0] D
 	);
 
 	wire clk_26;
