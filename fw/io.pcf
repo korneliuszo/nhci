@@ -1,3 +1,5 @@
 set_io RESET B2
 set_io CLK H16
+set_frequency CLK 12
+set_frequency clk_26 26
 set_io D T6
