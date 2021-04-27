@@ -1,36 +1,34 @@
-// Include common routines
-#include <verilated.h>
+#include <iostream>
+#include <fstream>
+#include <backends/cxxrtl/cxxrtl_vcd.h>
 
-// Include model header, generated from Verilating "top.v"
-#include "Vtop.h"
+#include "nhci-sim.hpp"
 
-int main(int argc, char** argv, char** env) {
-    // See a similar example walkthrough in the verilator manpage.
+int main() {
+	cxxrtl_design::p_top top;
 
-    // This is intended to be a minimal example.  Before copying this to start a
-    // real project, it is better to start with a more complete example,
-    // e.g. examples/c_tracing.
+	cxxrtl::debug_items all_debug_items;
 
-    // Prevent unused variable warnings
-    if (false && argc && argv && env) {}
+	top.debug_info(all_debug_items);
 
-    // Construct the Verilated model, from Vtop.h generated from Verilating "top.v"
-    Vtop* top = new Vtop;
+    cxxrtl::vcd_writer vcd;
+    vcd.timescale(1, "us");
 
-    // Simulate until $finish
-    while (!Verilated::gotFinish()) {
+    vcd.add_without_memories(all_debug_items);
 
-        // Evaluate model
-        top->eval();
-    }
+    std::ofstream waves("waves.vcd");
 
-    // Final model cleanup
-    top->final();
+	top.step();
 
-    // Destroy model
-    delete top;
+    vcd.sample(0);
 
-    // Return good completion status
-    return 0;
+	for (int cycle = 1; cycle < 1000; ++cycle) {
+
+		top.p_clk__26.set<bool>(!top.p_clk__26.get<bool>());
+		top.step();
+		vcd.sample(cycle);
+
+        waves << vcd.buffer;
+        vcd.buffer.clear();
+	}
 }
-

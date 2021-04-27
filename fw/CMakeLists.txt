@@ -5,16 +5,15 @@ include(ice40-cmake/ice40.cmake)
 project(nhci)
 
 set(COMMON_TOP
-	TOP_LEVEL_VERILOG
-		top.v
 	YOSYS_PATH
-		~/.apio/packages/toolchain-yosys/bin/
+		~/fpga-toolchain/bin/
 	NEXTPNR_PATH
-		~/.apio/packages/toolchain-ice40/bin/
+		~/fpga-toolchain/bin/
 	ICEPACK_PATH
-		~/.apio/packages/toolchain-ice40/bin/
+		~/fpga-toolchain/bin/
 	VERILOG_DEPENDS
 		pll.v
+		top.v
 )
 
 ice40_synth(
@@ -27,13 +26,18 @@ ice40_synth(
 	FPGA_PKG
 		ct256
 	${COMMON_TOP}
+	TOP_LEVEL_VERILOG
+		ic.v
 )
 
-find_package(verilator HINTS $ENV{VERILATOR_ROOT} ${VERILATOR_ROOT})
-add_executable(sim1 sim1_main.cpp)
-verilate(sim1 
-	SOURCES
+ice40_sim(
+	TARGET
+		nhci-sim
+	TOP_LEVEL_VERILOG
 		top.v
-	INCLUDE_DIRS
-		$ENV{HOME}/.apio/packages/toolchain-verilator/share
+	${COMMON_TOP}
 )
+
+add_executable(sim1
+	sim1_main.cpp)
+target_link_libraries(sim1 nhci-sim)
