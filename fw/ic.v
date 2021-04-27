@@ -2,7 +2,9 @@
 
 module ic(
 	input wire CLK,
-	output reg [0:0] D
+	inout wire [7:0] D,
+	input wire [15:0] A
+
 	);
 
 	wire clk_26;
@@ -15,6 +17,6 @@ module ic(
 		.REFERENCECLK(CLK)
 	);
 
-	top top(ckl_26, D);
+	top top(clk_26, D[0]);
 
 endmodule
