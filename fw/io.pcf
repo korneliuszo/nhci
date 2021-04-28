@@ -35,7 +35,7 @@ set_io OE R3
 set_io IOWR R1
 set_io IORD R2
 set_io CE1 R5
-set_io CE1 T3
+set_io CE2 T3
 set_io REG B4
 set_io WAIT A6
 set_io READY B6

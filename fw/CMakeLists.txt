@@ -14,6 +14,7 @@ set(COMMON_TOP
 	VERILOG_DEPENDS
 		pll.v
 		top.v
+		rom.v
 )
 
 ice40_synth(
@@ -34,10 +35,15 @@ ice40_sim(
 	TARGET
 		nhci-sim
 	TOP_LEVEL_VERILOG
-		top.v
+		sim.v
 	${COMMON_TOP}
 )
 
+
+find_package(Boost 1.45.0 COMPONENTS program_options) 
+
+include_directories(${BOOST_INCLUDE_DIRS})
 add_executable(sim1
 	sim1_main.cpp)
+target_link_libraries(sim1 ${Boost_LIBRARIES})
 target_link_libraries(sim1 nhci-sim)

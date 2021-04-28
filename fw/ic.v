@@ -2,9 +2,26 @@
 
 module ic(
 	input wire CLK,
-	inout wire [7:0] D,
-	input wire [15:0] A
-
+	inout [7:0] D,
+	input wire [15:0] A,
+	output wire DDIR,
+	input wire RESET,
+	input wire WE,
+	input wire OE,
+	input wire IOWR,
+	input wire IORD,
+	input wire CE1,
+	input wire CE2,
+	input wire REG,
+	output wire WAIT,
+	output wire INPACK,
+	output wire READY,
+	output wire WP,
+	output wire SS,
+	output wire SCLK,
+	output wire MOSI,
+	input wire MISO,
+	output wire INT,
 	);
 
 	wire clk_26;
@@ -17,6 +34,34 @@ module ic(
 		.REFERENCECLK(CLK)
 	);
 
-	top top(clk_26, D[0]);
+	wire [7:0] D_in;
+	wire [7:0] D_out;
+	assign D = DDIR ? D_out : 8'bZ;
+	assign D_in = D;
+
+	top top(
+		clk_26,
+		D_in,
+		D_out,
+		A,
+		DDIR,
+		RESET,
+		WE,
+		OE,
+		IOWR,
+		IORD,
+		CE1,
+		CE2,
+		REG,
+		WAIT,
+		INPACK,
+		READY,
+		WP,
+		SS,
+		SCLK,
+		MOSI,
+		MISO,
+		INT
+	 	);
 
 endmodule
