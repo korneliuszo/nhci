@@ -1,0 +1,66 @@
+01 // CISTPL_DEVICE
+02 // LEN
+d9 // DTYPE_FUNCSPEC WEN DSPEED_250NS
+ff // ENDTUPLE
+
+21 // CISTPL_FUNCID
+02 // LEN
+0b // FUNCTION: Serial I/O Bus Adapter
+00 // NOROM NOPOST
+
+22 // CISTPL_FUNCE
+05 // LEN
+02 // USB
+02 // NHCI
+03 // 500mA
+0c
+00 // 12Mbps
+
+15 // CISTPL_VERS_1
+0f // LEN
+04 // 
+01 // PCMCIA 2.1 / JEIDA 4.2
+4e // N
+79 // y
+75 // u
+75 // u
+00 // 
+4e // N
+48 // H
+43 // C
+49 // I
+00 //
+00 //
+00 //
+ff // ENDTUPLE
+
+1a // CISTPL_CONFIG
+05 // LEN
+01 // TPCC_RASZ=1
+01 // TPCC_LAST
+00 // ADDR:
+02 // 512
+01 // Only Configuration Option Register
+
+1b // CISTPL_CFTABLE_ENTRY
+07 // LEN
+C1 // CONF: 1 (DEFAULT)
+01 // I/O and Memory
+19 // POWER, IO, IRQ
+01 // Norm V
+55 // 5V
+22 // 8bit only, IOAddrLines: 2
+44 // Pulse, IRQ: 4
+
+20 // CISTPL_MANFID
+04 // LEN
+df // 
+00 // PCMCIA
+aa // 
+55 // some PID
+
+14 // CISTPL_NO_LINK
+00 // LEN
+
+ff //end
+

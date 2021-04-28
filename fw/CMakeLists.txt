@@ -15,6 +15,7 @@ set(COMMON_TOP
 		pll.v
 		top.v
 		rom.v
+		attr.list
 )
 
 ice40_synth(
