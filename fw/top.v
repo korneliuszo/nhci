@@ -2,8 +2,8 @@
 
 module top(
 	input wire clk_26,
-	input [7:0] D_in,
-	output [7:0] D_out,
+	input wire [7:0] D_in,
+	output reg [7:0] D_out,
 	input wire [15:0] A,
 	output wire DDIR,
 	input wire RESET,
