@@ -1,5 +1,5 @@
 module rom(
-	inout [7:0] D,
+	output wire [7:0] D,
 	input wire [15:0] A,
 	output wire DDIR,
 	input wire REGSELB,
