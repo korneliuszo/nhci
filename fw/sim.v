@@ -22,7 +22,7 @@ module sim(
 		output wire SCLK,
 		output wire MOSI,
 		input wire MISO,
-		output wire INT,
+		input wire INT,
 		);
 
 	top top(

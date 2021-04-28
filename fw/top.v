@@ -22,7 +22,7 @@ module top(
 	output wire SCLK,
 	output wire MOSI,
 	input wire MISO,
-	output wire INT,
+	input wire INT,
 	);
 
 	assign READY = 1;
@@ -31,6 +31,9 @@ module top(
 	assign DDIR = DDIR_ROM | 0;
 	assign WAIT = 1;
 
+	assign WP = 1; // #IOIS_16 - always 8 bit
+	assign INPACK = CE1;
+	
 	wire REG_SELB;
 	assign REG_SELB = REG | CE1;
 	wire [7:0] D_ROM;
