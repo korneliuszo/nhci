@@ -1,7 +1,11 @@
 #include <iostream>
 #include <fstream>
+#include <cstdio>
 #include <stdint.h>
 #include <boost/program_options.hpp>
+#include <boost/endian/arithmetic.hpp>
+#include <csignal>
+
 
 #include <backends/cxxrtl/cxxrtl_vcd.h>
 
@@ -26,6 +30,8 @@ public:
 	void waitclk();
 	void init_pcmcia();
 	uint8_t read_attr(unsigned int addr);
+	void set_reset(bool out);
+	bool get_ready();
 };
 
 
@@ -75,6 +81,17 @@ uint8_t sim1::read_attr(unsigned int addr)
 	return ret;
 }
 
+void sim1::set_reset(bool out)
+{
+	top.p_RESET.set<bool>(out);
+	update();
+}
+
+bool sim1::get_ready()
+{
+	return top.p_READY.get<bool>();
+}
+
 namespace po = boost::program_options;
 
 int main(int argc, char * argv[]) {
@@ -107,8 +124,49 @@ int main(int argc, char * argv[]) {
 	sim1 sim(vm["out-waveform"].as<std::string>());
 
     sim.init_pcmcia();
-    uint8_t attr =sim.read_attr(0);
 
-    std::cout << "First attr:" << std::hex <<
-    		static_cast<int>(attr) << "\n";
+    bool looping = true;
+    while(looping)
+    {
+    	uint8_t cmd;
+    	std::fread(&cmd,1,1,stdin);
+    	switch(cmd)
+    	{
+    	default:
+    	case 0x00:
+			break;
+    	case 0x05: //PING
+    	{
+    		uint8_t ping;
+    		std::fread(&ping,1,1,stdin);
+    		std::fwrite(&ping,1,1,stdout);
+    		break;
+    	}
+    	case 0x03: //GET_ATTR_MEMORY
+    	{
+    		boost::endian::big_int32_t addr;
+    		std::fread(&addr,4,1,stdin);
+    		uint8_t out = sim.read_attr(addr);
+    		std::fwrite(&out,1,1,stdout);
+    		break;
+    	}
+    	case 0x02: //SET_RESET
+    	{
+    		uint8_t state;
+    		std::fread(&state,1,1,stdin);
+    		sim.set_reset(static_cast<bool>(state));
+    		break;
+    	}
+    	case 0x06: //GET_READY
+    	{
+    		uint8_t out = sim.get_ready();
+    		std::fwrite(&out,1,1,stdout);
+    		break;
+    	}
+    	case 0xFF: //EXIT_SIM
+    		looping = false;
+    		std::cerr << "Closing" << "\n";
+    		break;
+    	}
+    }
 }

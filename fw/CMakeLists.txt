@@ -40,10 +40,46 @@ ice40_sim(
 )
 
 
-find_package(Boost 1.45.0 COMPONENTS program_options) 
+find_package(Boost 1.60.0 COMPONENTS program_options) 
 
 include_directories(${BOOST_INCLUDE_DIRS})
 add_executable(sim1
 	sim1_main.cpp)
 target_link_libraries(sim1 ${Boost_LIBRARIES})
 target_link_libraries(sim1 nhci-sim)
+
+function(python_test)
+	set(options)
+
+	set(oneValueArgs
+		PY_FILE
+	)
+	set(multiValueArgs OUTPUTS)
+	cmake_parse_arguments(PY "${options}" "${oneValueArgs}" "${multiValueArgs}" ${ARGN})
+		
+	find_package (Python3 COMPONENTS Interpreter)
+	add_custom_command(
+		OUTPUT
+			${PY_OUTPUTS}
+		COMMAND
+			${Python3_EXECUTABLE} ${PY_PY_FILE} ${CMAKE_CURRENT_BINARY_DIR}
+		DEPENDS
+			${PY_PY_FILE}
+			sim1		
+		WORKING_DIRECTORY
+			${CMAKE_CURRENT_SOURCE_DIR}
+
+		)
+	add_custom_target(${PY_PY_FILE}-run ALL
+		DEPENDS
+			${PY_OUTPUTS}
+		)
+endfunction()
+
+python_test(
+	PY_FILE
+		attr.py
+	OUTPUTS
+		attr.vcd
+		attr.bin-read
+	)

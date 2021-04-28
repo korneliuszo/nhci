@@ -25,6 +25,8 @@ module top(
 	output wire INT,
 	);
 
+	assign READY = 1;
+	
 	wire DDIR_ROM;
 	assign DDIR = DDIR_ROM | 0;
 	assign WAIT = 1;

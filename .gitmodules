@@ -4,3 +4,6 @@
 [submodule "fw/ice40-cmake"]
 	path = fw/ice40-cmake
 	url = https://github.com/korneliuszo/ice40-cmake.git
+[submodule "fw/pcmciahost"]
+	path = fw/pcmciahost
+	url = https://github.com/korneliuszo/pcmciahost
