@@ -54,7 +54,7 @@ void sim1::waitclk()
 
 void sim1::init_pcmcia()
 {
-	top.p_RESET.set<bool>(0);
+	top.p_RESET.set<bool>(1);
 	top.p_CE1.set<bool>(1);
 	top.p_CE2.set<bool>(1);
 	top.p_REG.set<bool>(1);
@@ -165,6 +165,7 @@ int main(int argc, char * argv[]) {
     	}
     	case 0xFF: //EXIT_SIM
     		looping = false;
+    		sim.update();
     		std::cerr << "Closing" << "\n";
     		break;
     	}
