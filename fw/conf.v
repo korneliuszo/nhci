@@ -15,13 +15,17 @@ module conf(
 	assign DDIR = !REGSELB & !OE & A[9];
 	
 	assign CONFIGURED = conf[5:0] == 1;
+
+initial
+begin
+	conf = 0;
+end
 	
-	
-always @(*)
+always @(posedge WE, posedge RESET)
 begin
 	if (RESET)
 		conf = 0;
-	else if (OE & !WE & !REGSELB & A[9])
+	else if (!REGSELB & A[9])
 		case(A[8:0])
 			9'b0	: conf = D_in;
 		endcase
@@ -34,6 +38,6 @@ begin
 		default : D_out = 0;
 	endcase		
 end
-	
+
 
 endmodule

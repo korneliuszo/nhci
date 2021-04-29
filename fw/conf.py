@@ -29,6 +29,9 @@ _, attr = printattr.parse_iterator(f)
 fcr = funcconfregs.FuncConfRegs(p,attr)
 
 fcr.CONFIG_OPTION = 1
+if (fcr.CONFIG_OPTION != 1):
+    print("Wrong read from config register")
+    exit(1)
 
 p.s.write(b'\xff')
 proc.wait()

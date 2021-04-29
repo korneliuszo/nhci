@@ -91,8 +91,9 @@ void sim1::write_attr(unsigned int addr,uint8_t val)
 	top.p_D__in.set<uint8_t>(val);
 	update();
 	waitclk();
-	top.p_CE1.set<bool>(1);
 	top.p_WE.set<bool>(1);
+	update();
+	top.p_CE1.set<bool>(1);
 	top.p_REG.set<bool>(1);
 	update();
 }
