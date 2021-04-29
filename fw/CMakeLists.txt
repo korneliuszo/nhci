@@ -58,12 +58,12 @@ function(python_test)
 	set(multiValueArgs OUTPUTS)
 	cmake_parse_arguments(PY "${options}" "${oneValueArgs}" "${multiValueArgs}" ${ARGN})
 		
-	find_package (Python3 COMPONENTS Interpreter)
+	FIND_PACKAGE(PythonInterp 3)
 	add_custom_command(
 		OUTPUT
 			${PY_OUTPUTS}
 		COMMAND
-			${Python3_EXECUTABLE} ${PY_PY_FILE} ${CMAKE_CURRENT_BINARY_DIR}
+			${PYTHON_EXECUTABLE} ${PY_PY_FILE} ${CMAKE_CURRENT_BINARY_DIR}
 		DEPENDS
 			${PY_PY_FILE}
 			sim1		
