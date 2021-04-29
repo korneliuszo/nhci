@@ -2,7 +2,7 @@
 
 module ic(
 	input wire CLK,
-	inout [7:0] D,
+	inout wire [7:0] D,
 	input wire [15:0] A,
 	output wire DDIR,
 	input wire RESET,
@@ -21,7 +21,7 @@ module ic(
 	output wire SCLK,
 	output wire MOSI,
 	input wire MISO,
-	input wire INT,
+	output wire INT
 	);
 
 	wire clk_26;

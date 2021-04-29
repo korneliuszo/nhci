@@ -22,7 +22,7 @@ module top(
 	output wire SCLK,
 	output wire MOSI,
 	input wire MISO,
-	input wire INT,
+	input wire INT
 	);
 
 	assign READY = 1;
