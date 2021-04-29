@@ -1,4 +1,5 @@
 `include "rom.v"
+`include "conf.v"
 
 module top(
 	input wire clk_26,
@@ -27,8 +28,8 @@ module top(
 
 	assign READY = 1;
 	
-	wire DDIR_ROM;
-	assign DDIR = DDIR_ROM | 0;
+	wire DDIR_ROM, DDIR_CONF;
+	assign DDIR = DDIR_ROM | DDIR_CONF | 0;
 	assign WAIT = 1;
 
 	assign WP = 1; // #IOIS_16 - always 8 bit
@@ -37,6 +38,7 @@ module top(
 	wire REG_SELB;
 	assign REG_SELB = REG | CE1;
 	wire [7:0] D_ROM;
+	wire [7:0] D_CONF;
 	
 	rom rom(
 			.D(D_ROM),
@@ -46,10 +48,25 @@ module top(
 			.OE(OE)
 		);
 
+	wire CONFIGURED;
+	
+	conf conf(
+			.D_out(D_CONF),
+			.D_in(D_in),
+			.A(A),
+			.DDIR(DDIR_CONF),
+			.REGSELB(REG_SELB),
+			.OE(OE),
+			.WE(WE),
+			.RESET(RESET),
+			.CONFIGURED(CONFIGURED)
+		);
+	
 always @(*)
 begin
-	case({DDIR_ROM})
-		1'b1	: D_out = D_ROM;
+	case({DDIR_CONF,DDIR_ROM})
+		2'b01	: D_out = D_ROM;
+		2'b10	: D_out = D_CONF;
 		default	: D_out = 8'b0;
 	endcase
 end

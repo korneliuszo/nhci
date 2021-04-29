@@ -16,6 +16,7 @@ set(COMMON_TOP
 		top.v
 		rom.v
 		attr.list
+		conf.v
 )
 
 ice40_synth(
@@ -55,7 +56,7 @@ function(python_test)
 	set(oneValueArgs
 		PY_FILE
 	)
-	set(multiValueArgs OUTPUTS)
+	set(multiValueArgs OUTPUTS DEPENDS)
 	cmake_parse_arguments(PY "${options}" "${oneValueArgs}" "${multiValueArgs}" ${ARGN})
 		
 	FIND_PACKAGE(PythonInterp 3)
@@ -66,6 +67,7 @@ function(python_test)
 			${PYTHON_EXECUTABLE} ${PY_PY_FILE} ${CMAKE_CURRENT_BINARY_DIR}
 		DEPENDS
 			${PY_PY_FILE}
+			${PY_DEPENDS}
 			sim1		
 		WORKING_DIRECTORY
 			${CMAKE_CURRENT_SOURCE_DIR}
@@ -82,5 +84,13 @@ python_test(
 		attr.py
 	OUTPUTS
 		attr.vcd
+		attr.bin-read
+	)
+python_test(
+	PY_FILE
+		conf.py
+	OUTPUTS
+		conf.vcd
+	DEPENDS
 		attr.bin-read
 	)
