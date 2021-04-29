@@ -30,6 +30,7 @@ public:
 	void waitclk();
 	void init_pcmcia();
 	uint8_t read_attr(unsigned int addr);
+	void write_attr(unsigned int addr,uint8_t val);
 	void set_reset(bool out);
 	bool get_ready();
 };
@@ -79,6 +80,21 @@ uint8_t sim1::read_attr(unsigned int addr)
 	top.p_REG.set<bool>(1);
 	update();
 	return ret;
+}
+
+void sim1::write_attr(unsigned int addr,uint8_t val)
+{
+	top.p_A.set<unsigned int>(addr);
+	top.p_CE1.set<bool>(0);
+	top.p_WE.set<bool>(0);
+	top.p_REG.set<bool>(0);
+	top.p_D__in.set<uint8_t>(val);
+	update();
+	waitclk();
+	top.p_CE1.set<bool>(1);
+	top.p_WE.set<bool>(1);
+	top.p_REG.set<bool>(1);
+	update();
 }
 
 void sim1::set_reset(bool out)
@@ -148,6 +164,15 @@ int main(int argc, char * argv[]) {
     		std::fread(&addr,4,1,stdin);
     		uint8_t out = sim.read_attr(addr);
     		std::fwrite(&out,1,1,stdout);
+    		break;
+    	}
+    	case 0x04: //SET_ATTR_MEMORY
+    	{
+    		boost::endian::big_int32_t addr;
+    		uint8_t val;
+    		std::fread(&addr,4,1,stdin);
+    		std::fread(&val,1,1,stdin);
+    		sim.write_attr(addr,val);
     		break;
     	}
     	case 0x02: //SET_RESET
