@@ -1,5 +1,15 @@
 `include "top.v"
 
+(* cxxrtl_blackbox *)
+module spi(
+		input wire SS,
+		(* cxxrtl_edge = "a" *) input wire SCLK,
+		input wire MOSI,
+		output wire MISO,
+		output wire INT
+		);
+endmodule
+
 module sim(
 		input wire clk_26,
 		input [7:0] D_in,
@@ -18,13 +28,14 @@ module sim(
 		output wire INPACK,
 		output wire READY,
 		output wire WP,
-		output wire SS,
-		output wire SCLK,
-		output wire MOSI,
-		input wire MISO,
-		input wire INT,
 		);
 
+	wire SS;
+	wire SCLK;
+	wire MOSI;
+	wire MISO;
+	wire INT;	
+	
 	top top(
 			clk_26,
 			D_in,
@@ -50,4 +61,11 @@ module sim(
 			INT
 		);
 
+	spi spi(
+			SS,
+			SCLK,
+			MOSI,
+			MISO,
+			INT);
+	
 endmodule

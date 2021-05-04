@@ -11,6 +11,75 @@
 
 #include "nhci-sim.hpp"
 
+namespace cxxrtl_design {
+
+struct spi_slave: public bb_p_spi {
+	std::array<uint8_t,32> regs =
+	{
+
+	};
+	uint8_t irq = 0xaa;
+	uint8_t *reg;
+	uint8_t in_reg;
+	enum class State {
+		IRQ,
+		RX,
+		TX
+	} state = State::IRQ;
+	int bit;
+	void reset() {};
+	void miso_update()
+	{
+		p_MISO.next.set<bool>(*reg & (1<<bit));
+	}
+	bool eval() override {
+		if (p_SS)
+		{
+			state = State::IRQ;
+			reg = &irq;
+			bit = 7;
+			miso_update();
+		}
+		else
+		{
+			if (posedge_p_SCLK())
+			{
+				in_reg = (in_reg << 1) | !!(p_MOSI.get<bool>());
+				bit--;
+				if(bit == -1)
+				{
+					bit = 7;
+					switch(state)
+					{
+					default:
+					case State:: IRQ:
+						reg = &regs[in_reg>>3];
+						state = (in_reg&0x02) ? State::TX : State::RX;
+						break;
+					case State::TX:
+						reg++;
+						break;
+					case State::RX:
+						*reg++ = in_reg;
+					}
+				}
+			}
+			if (negedge_p_SCLK())
+			{
+				miso_update();
+			}
+		}
+		return bb_p_spi::eval();
+	}
+};
+
+std::unique_ptr<bb_p_spi> bb_p_spi::create(std::string name,
+		cxxrtl::metadata_map parameters, cxxrtl::metadata_map attributes) {
+	return std::make_unique<spi_slave>();
+}
+
+}
+
 class sim1{
 	cxxrtl::vcd_writer vcd;
 	cxxrtl_design::p_sim top;
