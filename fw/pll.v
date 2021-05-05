@@ -8,12 +8,12 @@
  * Use at your own risk.
  *
  * Given input frequency:        12.000 MHz
- * Requested output frequency:   26.000 MHz
- * Achieved output frequency:    25.875 MHz
+ * Requested output frequency:   52.000 MHz
+ * Achieved output frequency:    51.750 MHz
  */
 
 .FEEDBACK_PATH("SIMPLE"),
 .DIVR(4'b0000),		// DIVR =  0
 .DIVF(7'b1000100),	// DIVF = 68
-.DIVQ(3'b101),		// DIVQ =  5
+.DIVQ(3'b100),		// DIVQ =  4
 .FILTER_RANGE(3'b001)	// FILTER_RANGE = 1

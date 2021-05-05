@@ -107,17 +107,25 @@ public:
 
 void sim1::update()
 {
-	top.step();
-	vcd.sample(cycle++);
+	cycle+=top.step();
+	vcd.sample(cycle);
     waves << vcd.buffer;
     vcd.buffer.clear();
 }
 
 void sim1::waitclk()
 {
+	top.p_clk__52.set<bool>(!top.p_clk__52.get<bool>());
+	update();
+	top.p_clk__52.set<bool>(!top.p_clk__52.get<bool>());
+	update();
+	top.p_clk__52.set<bool>(!top.p_clk__52.get<bool>());
+	update();
+	top.p_clk__52.set<bool>(!top.p_clk__52.get<bool>());
+	update();
 	while(!top.p_WAIT.get<bool>())
 	{
-		top.p_clk__26.set<bool>(!top.p_clk__26.get<bool>());
+		top.p_clk__52.set<bool>(!top.p_clk__52.get<bool>());
 		update();
 	}
 }

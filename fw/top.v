@@ -2,7 +2,7 @@
 `include "conf.v"
 
 module top(
-	input wire clk_26,
+	input wire clk_52,
 	input wire [7:0] D_in,
 	output reg [7:0] D_out,
 	input wire [15:0] A,

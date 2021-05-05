@@ -11,7 +11,7 @@ module spi(
 endmodule
 
 module sim(
-		input wire clk_26,
+		input wire clk_52,
 		input [7:0] D_in,
 		output [7:0] D_out,
 		input wire [15:0] A,
@@ -37,7 +37,7 @@ module sim(
 	wire INT;	
 	
 	top top(
-			clk_26,
+			clk_52,
 			D_in,
 			D_out,
 			A,

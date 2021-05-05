@@ -30,7 +30,7 @@ module ic(
 	)  SB_PLL40_CORE_inst (
 		.RESETB(1'b1),
 		.BYPASS(1'b0),
-		.PLLOUTGLOBAL(clk_26),
+		.PLLOUTGLOBAL(clk_52),
 		.REFERENCECLK(CLK)
 	);
 
@@ -40,7 +40,7 @@ module ic(
 	assign D_in = D;
 
 	top top(
-		clk_26,
+		clk_52,
 		D_in,
 		D_out,
 		A,
