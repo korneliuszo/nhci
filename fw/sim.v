@@ -12,8 +12,8 @@ endmodule
 
 module sim(
 		input wire clk_52,
-		input [7:0] D_in,
-		output [7:0] D_out,
+		input wire [7:0] D_in,
+		output wire [7:0] D_out,
 		input wire [15:0] A,
 		output wire DDIR,
 		input wire RESET,
@@ -28,13 +28,14 @@ module sim(
 		output wire INPACK,
 		output wire READY,
 		output wire WP,
-		);
+		output wire SS,
+		output wire SCLK,
+		output wire MOSI,
+		output wire MISO,
+		output wire INT,	
+	);
 
-	wire SS;
-	wire SCLK;
-	wire MOSI;
-	wire MISO;
-	wire INT;	
+
 	
 	top top(
 			clk_52,

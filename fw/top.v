@@ -1,5 +1,6 @@
 `include "rom.v"
 `include "conf.v"
+`include "spi.v"
 
 module top(
 	input wire clk_52,
@@ -26,11 +27,12 @@ module top(
 	input wire INT
 	);
 
-	assign READY = 1;
+	assign READY = ~CONFIGURED | INT;
 	
-	wire DDIR_ROM, DDIR_CONF;
-	assign DDIR = DDIR_ROM | DDIR_CONF | 0;
-	assign WAIT = 1;
+	wire DDIR_ROM, DDIR_CONF, DDIR_SPI;
+	assign DDIR = DDIR_ROM | DDIR_CONF | DDIR_SPI | 0;
+	wire WAIT_SPI;
+	assign WAIT = 1 & WAIT_SPI;
 
 	assign WP = 1; // #IOIS_16 - always 8 bit
 	assign INPACK = CE1;
@@ -39,7 +41,8 @@ module top(
 	assign REG_SELB = REG | CE1;
 	wire [7:0] D_ROM;
 	wire [7:0] D_CONF;
-	
+	wire [7:0] D_SPI;
+
 	rom rom(
 			.D(D_ROM),
 			.A(A),
@@ -61,12 +64,32 @@ module top(
 			.RESET(RESET),
 			.CONFIGURED(CONFIGURED)
 		);
+
+	wire IOWR_CONF, IORD_CONF;
+	assign IOWR_CONF = IOWR | ~CONFIGURED;
+	assign IORD_CONF = IORD | ~CONFIGURED;
+
+	master_spi spi(
+			.D_out(D_SPI),
+			.D_in(D_in),
+			.A(A),
+			.DDIR(DDIR_SPI),
+			.WAIT(WAIT_SPI),
+			.IOWR(IOWR_CONF),
+			.IORD(IORD_CONF),
+			.SS(SS),
+			.SCLK(SCLK),
+			.MOSI(MOSI),
+			.MISO(MISO),
+			.CLK(clk_52),
+		);
 	
 always @(*)
 begin
-	case({DDIR_CONF,DDIR_ROM})
-		2'b01	: D_out = D_ROM;
-		2'b10	: D_out = D_CONF;
+	case({DDIR_SPI,DDIR_CONF,DDIR_ROM})
+		3'b001	: D_out = D_ROM;
+		3'b010	: D_out = D_CONF;
+		3'b100	: D_out = D_SPI;
 		default	: D_out = 8'b0;
 	endcase
 end

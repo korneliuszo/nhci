@@ -17,6 +17,7 @@ set(COMMON_TOP
 		rom.v
 		attr.list
 		conf.v
+		spi.v
 )
 
 ice40_synth(
@@ -91,6 +92,14 @@ python_test(
 		conf.py
 	OUTPUTS
 		conf.vcd
+	DEPENDS
+		attr.bin-read
+	)
+python_test(
+	PY_FILE
+		spi.py
+	OUTPUTS
+		spi.vcd
 	DEPENDS
 		attr.bin-read
 	)
