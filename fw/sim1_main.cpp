@@ -100,6 +100,8 @@ public:
 	void init_pcmcia();
 	uint8_t read_attr(unsigned int addr);
 	void write_attr(unsigned int addr,uint8_t val);
+	uint8_t read_io(unsigned int addr);
+	void write_io(unsigned int addr,uint8_t val);
 	void set_reset(bool out);
 	bool get_ready();
 };
@@ -173,6 +175,39 @@ void sim1::write_attr(unsigned int addr,uint8_t val)
 	top.p_CE1.set<bool>(1);
 	top.p_REG.set<bool>(1);
 	update();
+}
+
+uint8_t sim1::read_io(unsigned int addr)
+{
+	top.p_A.set<unsigned int>(addr);
+	top.p_CE1.set<bool>(0);
+	top.p_IORD.set<bool>(0);
+	update();
+	waitclk();
+	uint8_t ret = top.p_D__out.get<uint8_t>();
+	top.p_IORD.set<bool>(1);
+	update();
+	top.p_CE1.set<bool>(1);
+	top.p_REG.set<bool>(1);
+	update();
+	waitclk();
+	return ret;
+}
+
+void sim1::write_io(unsigned int addr,uint8_t val)
+{
+	top.p_A.set<unsigned int>(addr);
+	top.p_CE1.set<bool>(0);
+	top.p_IOWR.set<bool>(0);
+	top.p_D__in.set<uint8_t>(val);
+	update();
+	waitclk();
+	top.p_IOWR.set<bool>(1);
+	update();
+	top.p_CE1.set<bool>(1);
+	top.p_REG.set<bool>(1);
+	update();
+	waitclk();
 }
 
 void sim1::set_reset(bool out)
@@ -251,6 +286,23 @@ int main(int argc, char * argv[]) {
     		std::fread(&addr,4,1,stdin);
     		std::fread(&val,1,1,stdin);
     		sim.write_attr(addr,val);
+    		break;
+    	}
+    	case 0x07: //GET_IO8
+    	{
+    		boost::endian::big_int32_t addr;
+    		std::fread(&addr,4,1,stdin);
+    		uint8_t out = sim.read_io(addr);
+    		std::fwrite(&out,1,1,stdout);
+    		break;
+    	}
+    	case 0x08: //SET_IO_8
+    	{
+    		boost::endian::big_int32_t addr;
+    		uint8_t val;
+    		std::fread(&addr,4,1,stdin);
+    		std::fread(&val,1,1,stdin);
+    		sim.write_io(addr,val);
     		break;
     	}
     	case 0x02: //SET_RESET
