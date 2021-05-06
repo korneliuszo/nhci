@@ -24,7 +24,7 @@ module ic(
 	input wire INT
 	);
 
-	wire clk_26;
+	wire clk_52;
 	SB_PLL40_CORE #(
 `include "pll.v"
 	)  SB_PLL40_CORE_inst (
