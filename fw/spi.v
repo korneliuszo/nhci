@@ -29,9 +29,8 @@ module master_spi(
 	reg IORD_ev = 1;
 	reg IOWR_ev = 1;
 
-	always @(IOWR)
+	always @(posedge IOWR)
 	begin
-		if (!IOWR)
 			IOWR_data = D_in;
 	end
 
