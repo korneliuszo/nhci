@@ -27,7 +27,9 @@ module master_spi(
 	assign MOSI = outreg[7];
 	reg [7:0] IOWR_data;
 	reg IORD_ev = 1;
+	reg IORD_ev2 = 1;
 	reg IOWR_ev = 1;
+	reg IOWR_ev2 = 1;
 
 	always @(posedge IOWR)
 	begin
@@ -54,14 +56,14 @@ module master_spi(
 			end
 			CLK2<=!CLK2;
 		end
-		else if (!IOWR_ev & IOWR)
+		else if (!IOWR_ev2 & IOWR_ev)
 		begin
 			nextss = A[1];
 			ctr = 9;
 			outreg = IOWR_data;
 			SS = 0;
 		end
-		else if (!IORD_ev & IORD)
+		else if (!IORD_ev2 & IORD_ev)
 		begin
 			if (!A[1])
 			begin
@@ -71,7 +73,9 @@ module master_spi(
 			else
 				SS = 1;
 		end
+		IOWR_ev2 = IOWR_ev;
 		IOWR_ev = IOWR;
+		IORD_ev2 = IORD_ev;
 		IORD_ev = IORD;
 	end
 
