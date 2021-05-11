@@ -30,10 +30,18 @@ module master_spi(
 	reg IORD_ev2 = 1;
 	reg IOWR_ev = 1;
 	reg IOWR_ev2 = 1;
+	reg A_WR;
+	reg A_RD;
 
 	always @(posedge IOWR)
 	begin
 			IOWR_data = D_in;
+			A_WR = A[1];
+	end
+
+	always @(posedge IORD)
+	begin
+			A_RD = A[1];
 	end
 
 	reg CLK2 = 1;
@@ -58,14 +66,14 @@ module master_spi(
 		end
 		else if (!IOWR_ev2 & IOWR_ev)
 		begin
-			nextss = A[1];
+			nextss = A_WR;
 			ctr = 9;
 			outreg = IOWR_data;
 			SS = 0;
 		end
 		else if (!IORD_ev2 & IORD_ev)
 		begin
-			if (!A[1])
+			if (!A_RD)
 			begin
 				ctr = 8;
 				nextss = 0;
