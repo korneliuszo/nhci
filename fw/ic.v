@@ -21,6 +21,7 @@ module ic(
 	output wire SCLK,
 	output wire MOSI,
 	input wire MISO,
+	output wire U_RES,
 	input wire INT
 	);
 
@@ -61,6 +62,7 @@ module ic(
 		SCLK,
 		MOSI,
 		MISO,
+		U_RES,
 		INT
 	 	);
 

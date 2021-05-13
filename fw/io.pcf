@@ -47,3 +47,4 @@ set_io SCLK E16
 set_io MOSI F15
 set_io MISO F16
 set_io INT G15
+set_io U_RES D16

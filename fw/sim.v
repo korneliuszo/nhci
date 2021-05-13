@@ -32,7 +32,8 @@ module sim(
 		output wire SCLK,
 		output wire MOSI,
 		output wire MISO,
-		output wire INT,	
+		output wire U_RES,
+		output wire INT,
 	);
 
 
@@ -59,6 +60,7 @@ module sim(
 			SCLK,
 			MOSI,
 			MISO,
+			U_RES,
 			INT
 		);
 

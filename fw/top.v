@@ -24,6 +24,7 @@ module top(
 	output wire SCLK,
 	output wire MOSI,
 	input wire MISO,
+	output wire U_RES,
 	input wire INT
 	);
 
@@ -82,6 +83,7 @@ module top(
 			.MOSI(MOSI),
 			.MISO(MISO),
 			.CLK(clk_52),
+			.U_RES(U_RES)
 		);
 	
 always @(*)

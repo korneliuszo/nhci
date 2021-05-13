@@ -10,9 +10,11 @@ module master_spi(
 		output wire SCLK,
 		output wire MOSI,
 		input wire MISO,
-		input wire CLK
+		input wire CLK,
+		output wire U_RES
 		);
 	wire working;
+	assign U_RES = 1;
 	reg nextss = 1;
 	reg [7:0] outreg;
 	reg [7:0] inreg;
