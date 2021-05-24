@@ -44,30 +44,42 @@ module master_spi(
 			A_RD = A[1];
 	end
 
-	reg CLK2 = 1;
+	reg CLK2 = 0;
 	assign SCLK = CLK2;
 
 	always @(posedge CLK)
 	begin
 		if (working)
 		begin
-			if (!CLK2)
+			if (ctr == 10)
 			begin
+				inreg <= {inreg[6:0],MISO};
 				ctr = ctr - 1;
-				outreg <= {outreg[6:0],1'b0};
-				if (ctr == 0)
+			end
+			else if (!CLK2)
+			begin
+				if (ctr == 1)
+				begin
 					SS <= nextss;
+					ctr <= 0;
+				end
+				else
+				begin
+					inreg <= {inreg[6:0],MISO};
+					CLK2<=!CLK2;
+				end
 			end
 			else
 			begin
-				inreg <= {inreg[6:0],MISO};
+				outreg <= {outreg[6:0],1'b0};
+				ctr = ctr - 1;
+				CLK2<=!CLK2;
 			end
-			CLK2<=!CLK2;
 		end
 		else if (!IOWR_ev2 & IOWR_ev)
 		begin
 			nextss = A_WR;
-			ctr = 9;
+			ctr = 10;
 			outreg = IOWR_data;
 			SS = 0;
 		end
@@ -75,7 +87,7 @@ module master_spi(
 		begin
 			if (!A_RD)
 			begin
-				ctr = 8;
+				ctr = 10;
 				nextss = 0;
 			end
 			else
