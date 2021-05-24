@@ -48,6 +48,7 @@ struct spi_slave: public bb_p_spi {
 				bit--;
 				if(bit == -1)
 				{
+					std::cerr << "Recv:" << (int)in_reg << "\n";
 					bit = 7;
 					switch(state)
 					{
@@ -56,10 +57,10 @@ struct spi_slave: public bb_p_spi {
 						reg = &regs[in_reg>>3];
 						state = (in_reg&0x02) ? State::TX : State::RX;
 						break;
-					case State::TX:
+					case State::RX:
 						reg++;
 						break;
-					case State::RX:
+					case State::TX:
 						*reg++ = in_reg;
 					}
 				}
@@ -109,7 +110,8 @@ public:
 
 void sim1::update()
 {
-	cycle+=top.step();
+	top.step();
+	cycle++;
 	vcd.sample(cycle);
     waves << vcd.buffer;
     vcd.buffer.clear();
