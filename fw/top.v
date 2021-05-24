@@ -29,7 +29,7 @@ module top(
 	);
 
 	assign READY = ~CONFIGURED | INT;
-	
+	assign U_RES = ~RESET;
 	wire DDIR_ROM, DDIR_CONF, DDIR_SPI;
 	assign DDIR = DDIR_ROM | DDIR_CONF | DDIR_SPI | 0;
 	wire WAIT_SPI;
@@ -83,7 +83,6 @@ module top(
 			.MOSI(MOSI),
 			.MISO(MISO),
 			.CLK(clk_52),
-			.U_RES(U_RES)
 		);
 	
 always @(*)
