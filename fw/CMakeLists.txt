@@ -39,6 +39,8 @@ ice40_sim(
 		nhci-sim
 	TOP_LEVEL_VERILOG
 		sim.v
+	CXXRTL_OPTIMIZE
+		0
 	${COMMON_TOP}
 )
 
