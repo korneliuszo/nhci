@@ -35,6 +35,15 @@ module ic(
 		.REFERENCECLK(CLK)
 	);
 
+	wire INT_int;
+	SB_IO #(
+			.PIN_TYPE(6'b 0000_01),
+			.PULLUP(1'b 1)
+		) button_input(
+			.PACKAGE_PIN(INT),
+			.D_IN_0(INT_int)
+		);
+
 	wire [7:0] D_in;
 	wire [7:0] D_out;
 	assign D = DDIR ? D_out : 8'bZ;
@@ -63,7 +72,7 @@ module ic(
 		MOSI,
 		MISO,
 		U_RES,
-		INT
+		INT_int
 	 	);
 
 endmodule
