@@ -253,7 +253,7 @@ $EndComp
 Wire Wire Line
 	7050 2100 7650 2100
 Wire Wire Line
-	7650 2100 8650 2100
+	7650 2100 8050 2100
 Wire Wire Line
 	9150 2100 9150 2500
 Wire Wire Line
@@ -430,4 +430,11 @@ Wire Wire Line
 Connection ~ 8650 2100
 Wire Wire Line
 	8650 2100 9150 2100
+Wire Wire Line
+	6500 4100 8050 4100
+Wire Wire Line
+	8050 4100 8050 2100
+Connection ~ 8050 2100
+Wire Wire Line
+	8050 2100 8650 2100
 $EndSCHEMATC

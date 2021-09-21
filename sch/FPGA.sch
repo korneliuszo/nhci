@@ -928,4 +928,24 @@ Wire Wire Line
 Connection ~ 9100 3000
 Wire Wire Line
 	9100 3000 9100 2650
+Text GLabel 3400 4250 0    50   Input ~ 0
+F_CE1O
+Text GLabel 3400 3950 0    50   Input ~ 0
+F_CE2O
+Text GLabel 3400 2850 0    50   Input ~ 0
+F_D11
+Text GLabel 3400 2350 0    50   Input ~ 0
+F_D12
+Text GLabel 3400 3350 0    50   Input ~ 0
+F_D13
+Text GLabel 3400 1150 0    50   Input ~ 0
+F_D14
+Text GLabel 3400 2450 0    50   Input ~ 0
+F_D15
+Text GLabel 3400 1550 0    50   Input ~ 0
+F_D8
+Text GLabel 3400 1750 0    50   Input ~ 0
+F_D9
+Text GLabel 3400 1350 0    50   Input ~ 0
+F_D10
 $EndSCHEMATC
